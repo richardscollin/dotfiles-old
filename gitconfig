@@ -1,0 +1,12 @@
+[user]
+	email = richardscollin@gatech.edu
+	name = Collin Richards
+[push]
+	default = simple
+[alias]
+	st = status
+	co = checkout
+	ci = commit
+	st = status
+	br = branch
+	hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
