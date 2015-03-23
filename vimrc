@@ -37,7 +37,7 @@ set softtabstop=4
 set expandtab
 
 syntax on
-colorscheme elflord
+colorscheme darkblue
 
 set nowrap
 set nu
