@@ -1,5 +1,5 @@
+acpi
 awesome
-cproto47
 ctags
 feh
 firefox
@@ -9,5 +9,9 @@ roxterm
 strace
 vim
 wpa_supplicant
+xorg
+xorg-xinit
 youtube-viewer
 zathura
+zathura-pdf-poppler
+zsh
