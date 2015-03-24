@@ -6,6 +6,7 @@ firefox
 git 
 mplayer
 roxterm
+ssmtp
 strace
 vim
 wpa_supplicant
