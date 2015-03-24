@@ -8,7 +8,6 @@ Plugin 'bling/vim-airline'
 Plugin 'gmarik/Vundle.vim'
 Plugin 'mattn/emmet-vim'
 Plugin 'scrooloose/syntastic'
-Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
 call vundle#end()            " required
 filetype plugin indent on    " required
