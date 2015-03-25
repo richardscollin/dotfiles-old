@@ -10,4 +10,5 @@ ln -s $CONFIG/gitconfig $HOME/.gitconfig
 
 ln -s $CONFIG/zshrc $HOME/.zshrc
 ln -s $CONFIG/aliases $HOME/.aliases
+ln -s $CONFIG/variables $HOME/.variables
 

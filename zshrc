@@ -13,3 +13,7 @@ then
     source "$HOME/.aliases"
 fi
 
+if [[ -a "$HOME/.variables" ]]
+then
+    source "$HOME/.variables"
+fi
