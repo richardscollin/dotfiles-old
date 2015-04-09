@@ -1,12 +1,14 @@
 acpi
 alsa-utils
 apache-ant
+autojump
 awesome
 base-devel
 ctags
 feh
 firefox
 git 
+gdb
 java-environment
 junit
 mplayer
@@ -28,3 +30,5 @@ youtube-viewer
 zathura
 zathura-pdf-poppler
 zsh
+zip
+unzip

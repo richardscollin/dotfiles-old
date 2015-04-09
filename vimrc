@@ -4,10 +4,11 @@ set nocompatible              " required
 filetype off                  " required
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-Plugin 'bling/vim-airline'
+"Plugin 'bling/vim-airline'
 Plugin 'gmarik/Vundle.vim'
 Plugin 'mattn/emmet-vim'
-Plugin 'scrooloose/syntastic'
+"Plugin 'scrooloose/syntastic'
+Plugin 'chriskempson/base16-vim'
 Plugin 'tpope/vim-surround'
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -21,6 +22,10 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 "----------------------------------------------------------------------------------------------
 "
+"Colorscheme stuff
+set background=dark
+colorscheme base16-default
+let base16colorspace=256
 "Airline Settings
 set t_Co=256
 set encoding=utf-8
@@ -36,11 +41,10 @@ set softtabstop=4
 set expandtab
 
 syntax on
-colorscheme elflord
 
 set nowrap
-set nu
-set rnu
+"set nu
+"set rnu
 " Custom mappings
 nnoremap  ; :
 inoremap jk <esc>

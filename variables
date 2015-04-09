@@ -1,4 +1,5 @@
 export CHORD_MAIN_DIR=/home/collin/research/chord-bin-2.1
 PATH="$PATH:$HOME/bin"
 export PATH="$PATH:/opt/lc3/bin"
-
+export Z3_LIB_PATH=/home/collin/research/ScalaZ3/z3/4.3-unix-64b/lib
+export LD_LIBRARY_PATH=$Z3_LIB_PATH

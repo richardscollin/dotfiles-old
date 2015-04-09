@@ -39,7 +39,7 @@ end
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
 beautiful.init("/usr/share/awesome/themes/default/theme.lua")
-beautiful.wallpaper = "/home/collin/wallpapers/foxkeh.png"
+beautiful.wallpaper = "/home/collin/wallpapers/black.png"
 
 -- This is used later as the default terminal and editor to run.
 terminal = "roxterm"
@@ -460,4 +460,10 @@ end)
 
 client.connect_signal("focus", function(c) c.border_color = beautiful.border_focus end)
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
+
+
+-- Autostart
+awful.util.spawn("firefox") 
+
+
 -- }}}

@@ -1,3 +1,6 @@
 alias sl=ls
+alias neo=nvim
 alias la="ls -la"
+alias z3="scala -classpath $HOME/research/ScalaZ3/target/scala-2.10/scalaz3_2.10-2.1.jar"
+
 
