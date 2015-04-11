@@ -39,23 +39,22 @@ set tabstop=8
 set shiftwidth=4
 set softtabstop=4
 set expandtab
+set backspace=2
 
 syntax on
-
 set nowrap
-"set nu
+set nu
 "set rnu
 " Custom mappings
 nnoremap  ; :
 inoremap jk <esc>
 inoremap kj <esc>
-
 "Use minus to jump to end of line.
 nnoremap - $
 onoremap - $
-
 nnoremap j gj
 nnoremap k gk
-
 cnoremap q1 q!
+
+autocmd BufNewFile *.c 0r ~/config/skeleton.c
 

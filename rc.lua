@@ -39,7 +39,7 @@ end
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
 beautiful.init("/usr/share/awesome/themes/default/theme.lua")
-beautiful.wallpaper = "/home/collin/wallpapers/black.png"
+beautiful.wallpaper = "/home/collin/wallpapers/blue.png"
 
 -- This is used later as the default terminal and editor to run.
 terminal = "roxterm"
