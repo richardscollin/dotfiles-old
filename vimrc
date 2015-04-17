@@ -7,9 +7,11 @@ call vundle#begin()
 "Plugin 'bling/vim-airline'
 Plugin 'gmarik/Vundle.vim'
 Plugin 'mattn/emmet-vim'
-"Plugin 'scrooloose/syntastic'
+Plugin 'scrooloose/syntastic'
 Plugin 'chriskempson/base16-vim'
 Plugin 'tpope/vim-surround'
+Plugin 'AndrewRadev/switch.vim'
+Plugin 'editorconfig/editorconfig-vim'
 call vundle#end()            " required
 filetype plugin indent on    " required
 " Brief help
@@ -21,6 +23,21 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 "----------------------------------------------------------------------------------------------
+"
+"
+
+let g:switch_mapping = ","
+let b:switch_custom_definitions = [
+            \   {
+            \     '\<[a-z0-9]\+_\k\+\>': {
+            \       '_\(.\)': '\U\1'
+            \     },
+            \     '\<[a-z0-9]\+[A-Z]\k\+\>': {
+            \       '\([A-Z]\)': '_\l\1'
+            \     },
+            \   }
+            \ ]
+"
 "
 "Colorscheme stuff
 set background=dark
@@ -39,9 +56,13 @@ set tabstop=8
 set shiftwidth=4
 set softtabstop=4
 set expandtab
-set backspace=2
+
+set wildmenu
+set cursorline
+set backspace=2 "need for proper backspace behavoir in neovim
 
 syntax on
+set nojoinspaces
 set nowrap
 set nu
 "set rnu
@@ -55,6 +76,8 @@ onoremap - $
 nnoremap j gj
 nnoremap k gk
 cnoremap q1 q!
-
 autocmd BufNewFile *.c 0r ~/config/skeleton.c
+
+autocmd BufNewFile,BufNew,BufRead *.txt set spell
+autocmd BufNewFile,BufNew,BufRead *.txt set wrap
 

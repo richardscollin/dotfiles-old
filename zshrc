@@ -27,3 +27,5 @@ if [[ -a "$HOME/.variables" ]]
 then
     source "$HOME/.variables"
 fi
+space
+ls
