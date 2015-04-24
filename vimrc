@@ -77,7 +77,9 @@ nnoremap j gj
 nnoremap k gk
 cnoremap q1 q!
 autocmd BufNewFile *.c 0r ~/config/skeleton.c
+autocmd BufNewFile *.tex 0r ~/config/skeleton.tex
 
 autocmd BufNewFile,BufNew,BufRead *.txt set spell
 autocmd BufNewFile,BufNew,BufRead *.txt set wrap
+autocmd BufNewFile,BufNew,BufRead *.txt set linebreak
 
