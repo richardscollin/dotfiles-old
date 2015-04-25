@@ -1,6 +1,5 @@
 
-!Stil a work in progress but I got most of the keybindings that
-!I'm use to
+!Stil a work in progress but I got most of the keybindings that Im use to
 
 ! URxvt Settings
 URxvt.perl-ext-common:                  default,clipboard,matcher,tabbedex,font-size
