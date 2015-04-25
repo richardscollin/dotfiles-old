@@ -1,0 +1,89 @@
+
+!Stil a work in progress but I got most of the keybindings that
+!I'm use to
+
+! URxvt Settings
+URxvt.perl-ext-common:                  default,clipboard,matcher,tabbedex,font-size
+URxvt*font:                             xft:DejaVu Sans Mono for Powerline:pixelsize=15:antialias=true:hinting=true
+
+URxvt*url-launcher:                     firefox
+URxvt.matcher.button:                   1
+URxvt*scrollBar:                        false
+
+!Not 100% sure what it does but it was recommended by arch wiki
+URxvt.secondaryScreen:                  1
+URxvt.secondaryScroll:                  0
+
+!disable default behavior so that you can map to control and control shift
+URxvt.iso14755:                         false
+URxvt.iso14755_52:                      false
+
+!clipbard settings
+URxvt.keysym.C-S-C:                     perl:clipboard:copy
+URxvt.keysym.C-S-V:                     perl:clipboard:paste
+
+!font settings
+URxvt.keysym.C-S-plus:                  perl:font-size:increase
+URxvt.keysym.C-S-underscore:            perl:font-size:decrease
+
+!tab settings
+URxvt.tabbed.autohide:                  true
+URxvt.tabbed.no-tabbedex-keys:          true
+URxvt.keysym.C-S-T:                     perl:tabbedex:new_tab
+URxvt.keysym.M-k:                       perl:tabbedex:next_tab
+URxvt.keysym.M-j:                       perl:tabbedex:prev_tab
+URxvt.keysym.C-S-j:                     perl:tabbedex:move_tab_left
+URxvt.keysym.C-S-k:                     perl:tabbedex:move_tab_right
+
+!tab colors
+URxvt.tabbed.title-fg:                  3
+URxvt.tabbed.title-bg:                  0
+
+URxvt.tabbed.tabbar-fg:                 6
+URxvt.tabbed.tabbar-bg:                 0
+
+URxvt.tabbed.tab-fg:                    3
+URxvt.tabbed.tab-bg:                    0
+
+! Colors
+! Base16 Default
+! Scheme: Chris Kempson (http://chriskempson.com)
+
+#define base00 #181818
+#define base01 #282828
+#define base02 #383838
+#define base03 #585858
+#define base04 #b8b8b8
+#define base05 #d8d8d8
+#define base06 #e8e8e8
+#define base07 #f8f8f8
+#define base08 #ab4642
+#define base09 #dc9656
+#define base0A #f7ca88
+#define base0B #a1b56c
+#define base0C #86c1b9
+#define base0D #7cafc2
+#define base0E #ba8baf
+#define base0F #a16946
+
+*.foreground:   base05
+*.background:   base00
+*.cursorColor:  base05
+
+*.color0:       base00
+*.color1:       base08
+*.color2:       base0B
+*.color3:       base0A
+*.color4:       base0D
+*.color5:       base0E
+*.color6:       base0C
+*.color7:       base05
+
+*.color8:       base03
+*.color9:       base09
+*.color10:      base01
+*.color11:      base02
+*.color12:      base04
+*.color13:      base06
+*.color14:      base0F
+*.color15:      base07
