@@ -39,7 +39,7 @@ end
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
 beautiful.init("/usr/share/awesome/themes/default/theme.lua")
-beautiful.wallpaper = "/home/collin/wallpapers/blue.png"
+beautiful.wallpaper = "/home/collin/wallpapers/foxkeh.png"
 
 -- This is used later as the default terminal and editor to run.
 terminal = "urxvt"
@@ -290,8 +290,7 @@ globalkeys = awful.util.table.join(
     awful.key({ modkey }, "p", function() menubar.show() end),
     
     --Applications
-    awful.key({ modkey,           }, "t", function () awful.util.spawn(terminal)      end),
-    awful.key({ modkey,           }, "f", function () awful.util.spawn("firefox")      end)
+    awful.key({ modkey,           }, "t", function () awful.util.spawn(terminal)      end)
 )
 
 clientkeys = awful.util.table.join(

@@ -42,7 +42,7 @@ let b:switch_custom_definitions = [
 "Colorscheme stuff
 set background=dark
 colorscheme base16-default
-let base16colorspace=256
+"let base16colorspace=256
 "Airline Settings
 set t_Co=256
 set encoding=utf-8
@@ -78,6 +78,7 @@ nnoremap k gk
 cnoremap q1 q!
 autocmd BufNewFile *.c 0r ~/config/skeleton.c
 autocmd BufNewFile *.tex 0r ~/config/skeleton.tex
+autocmd BufNewFile *.java 0r ~/config/skeleton.java
 
 autocmd BufNewFile,BufNew,BufRead *.txt set spell
 autocmd BufNewFile,BufNew,BufRead *.txt set wrap

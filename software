@@ -5,10 +5,13 @@ autojump
 awesome
 base-devel
 ctags
+cups
+libcups
 feh
 firefox
 git 
 gdb
+gutenprint
 java-environment
 junit
 mplayer

@@ -1,5 +1,10 @@
 
 !Stil a work in progress but I got most of the keybindings that Im use to
+!
+
+!Transparency
+URxvt.depth:                            32
+URxvt.background:                       [90]#181818
 
 ! URxvt Settings
 URxvt.perl-ext-common:                  default,clipboard,matcher,tabbedex,font-size
@@ -28,11 +33,12 @@ URxvt.keysym.C-S-underscore:            perl:font-size:decrease
 !tab settings
 URxvt.tabbed.autohide:                  true
 URxvt.tabbed.no-tabbedex-keys:          true
+URxvt.keysym.M-t:                       perl:tabbedex:new_tab
 URxvt.keysym.C-S-T:                     perl:tabbedex:new_tab
 URxvt.keysym.M-k:                       perl:tabbedex:next_tab
 URxvt.keysym.M-j:                       perl:tabbedex:prev_tab
-URxvt.keysym.C-S-j:                     perl:tabbedex:move_tab_left
-URxvt.keysym.C-S-k:                     perl:tabbedex:move_tab_right
+URxvt.keysym.C-S-J:                     perl:tabbedex:move_tab_left
+URxvt.keysym.C-S-K:                     perl:tabbedex:move_tab_right
 
 !tab colors
 URxvt.tabbed.title-fg:                  3
@@ -65,24 +71,24 @@ URxvt.tabbed.tab-bg:                    0
 #define base0E #ba8baf
 #define base0F #a16946
 
-*.foreground:   base05
-*.background:   base00
-*.cursorColor:  base05
+URxvt*.foreground:   base05
+URxvt*.background:   base00
+URxvt*.cursorColor:  base05
 
-*.color0:       base00
-*.color1:       base08
-*.color2:       base0B
-*.color3:       base0A
-*.color4:       base0D
-*.color5:       base0E
-*.color6:       base0C
-*.color7:       base05
+URxvt*.color0:       base00
+URxvt*.color1:       base08
+URxvt*.color2:       base0B
+URxvt*.color3:       base0A
+URxvt*.color4:       base0D
+URxvt*.color5:       base0E
+URxvt*.color6:       base0C
+URxvt*.color7:       base05
 
-*.color8:       base03
-*.color9:       base09
-*.color10:      base01
-*.color11:      base02
-*.color12:      base04
-*.color13:      base06
-*.color14:      base0F
-*.color15:      base07
+URxvt*.color8:       base03
+URxvt*.color9:       base09
+URxvt*.color10:      base01
+URxvt*.color11:      base02
+URxvt*.color12:      base04
+URxvt*.color13:      base06
+URxvt*.color14:      base0F
+URxvt*.color15:      base07

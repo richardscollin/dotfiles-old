@@ -1,6 +1,20 @@
-alias sl=ls
-alias neo=nvim
+alias c="cd"
+alias f="firefox"
+alias g="git"
+alias l="ls -ls"
 alias la="ls -la"
-alias z3="scala -classpath $HOME/research/ScalaZ3/target/scala-2.10/scalaz3_2.10-2.1.jar"
+alias m="mv"
+alias o="open"
+alias open="xdg-open"
+alias p="pacman"
+alias s="sudo "
+alias shit="shutdown -h now"
+alias sl=ls
+alias sudo="sudo "
+alias u="unzip"
+alias v="vim"
+alias x="tar xzvf"
 
+alias neo=nvim
+alias z3="scala -classpath $HOME/research/ScalaZ3/target/scala-2.10/scalaz3_2.10-2.1.jar"
 
