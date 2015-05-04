@@ -1,4 +1,6 @@
+alias a="ag"
 alias c="cd"
+alias cc="clang -Weverything"
 alias f="firefox"
 alias g="git"
 alias l="ls -ls"
@@ -7,6 +9,7 @@ alias m="mv"
 alias o="open"
 alias open="xdg-open"
 alias p="pacman"
+alias r=rustc
 alias s="sudo "
 alias shit="shutdown -h now"
 alias sl=ls
