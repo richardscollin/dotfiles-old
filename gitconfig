@@ -6,6 +6,7 @@
 [alias]
 	st = status
 	ch = checkout
+	c  = commit
 	co = commit
 	ci = commit
 	st = status
