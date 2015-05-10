@@ -11,7 +11,7 @@ fi
 
 plugins=(git autojump)
 
-if [ "$TERM" = "rxvt-unicode-256color" ];then
+if [ "$TERM" = "rxvt-unicode-256color" ] || [ "$TERM" = "screen" ] ;then
     ZSH_THEME="agnoster"
 fi
 

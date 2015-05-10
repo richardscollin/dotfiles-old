@@ -4,7 +4,7 @@ set nocompatible              " required
 filetype off                  " required
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-"Plugin 'AndrewRadev/switch.vim'
+Plugin 'AndrewRadev/switch.vim'
 "Plugin 'bling/vim-airline'
 Plugin 'chriskempson/base16-vim'
 Plugin 'editorconfig/editorconfig-vim'
@@ -24,6 +24,7 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 "----------------------------------------------------------------------------------------------
 
+"switch between camelCase and under_score
 let g:switch_mapping = ","
 let b:switch_custom_definitions = [
             \   {
@@ -38,11 +39,11 @@ let b:switch_custom_definitions = [
 "
 "
 "Colorscheme stuff
-"set background=light
+"set background=dark
 "colorscheme base16-default
 "let base16colorspace=256
 "Airline Settings
-"set t_Co=256
+set t_Co=256
 set encoding=utf-8
 set laststatus=2
 

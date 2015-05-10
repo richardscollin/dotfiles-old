@@ -4,11 +4,14 @@
 [push]
 	default = simple
 [alias]
+	a  = add
+	s  = status
 	st = status
 	ch = checkout
 	c  = commit
 	co = commit
 	ci = commit
+	d  = diff
 	st = status
 	br = branch
 	hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short

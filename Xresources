@@ -2,9 +2,8 @@
 !Stil a work in progress but I got most of the keybindings that Im use to
 !
 
-!Transparency
-!URxvt.depth:                            32
-!URxvt.background:                       [90]#181818
+URxvt.depth: 32
+URxvt.background: [95]#000000
 
 ! URxvt Settings
 URxvt.perl-ext-common:                  default,clipboard,matcher,tabbedex,font-size
