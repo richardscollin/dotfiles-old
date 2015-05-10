@@ -11,6 +11,7 @@ feh
 firefox
 git 
 gdb
+gvim
 gutenprint
 java-environment
 junit
@@ -24,7 +25,6 @@ ssmtp
 strace
 svn
 texlive-most
-vim
 wget
 wpa_supplicant
 xorg

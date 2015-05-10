@@ -10,8 +10,9 @@
 	ch   = checkout
 	ci   = commit
 	co   = commit
+	d    = diff
+	hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
 	s    = status
 	st   = status
-	hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
 [help]
 	autocorrect = 10

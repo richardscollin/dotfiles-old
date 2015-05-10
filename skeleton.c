@@ -1,5 +1,5 @@
 #if 0
-gcc -g -Wall "$0" && exec ./a.out "$@"
+clang -Weverything -Werror "$0" && exec ./a.out "$@"
 exit 1
 #endif
 
@@ -7,6 +7,7 @@ exit 1
 
 int main(int argc, char *argv[])
 {
-    printf("Hello World!\n");
+    printf("%s called with %d parameter%s!\n", argv[0], argc - 1,
+            argc == 2 ? "" : "s");
     return 0;
 }
