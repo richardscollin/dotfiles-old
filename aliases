@@ -15,6 +15,7 @@ alias s="sudo "
 alias shit="shutdown -h now"
 alias sl=ls
 alias sudo="sudo "
+alias sx="startx "
 alias u="unzip"
 alias v="vim"
 alias x="tar xzvf"
