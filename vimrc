@@ -25,16 +25,12 @@ filetype plugin indent on    " required
 "----------------------------------------------------------------------------------------------
 
 "switch between camelCase and under_score
-let g:switch_mapping = ","
+let g:switch_mapping = "<leader>,"
 let b:switch_custom_definitions = [
             \   {
-            \     '\<[a-z0-9]\+_\k\+\>': {
-            \       '_\(.\)': '\U\1'
-            \     },
-            \     '\<[a-z0-9]\+[A-Z]\k\+\>': {
-            \       '\([A-Z]\)': '_\l\1'
-            \     },
-            \   }
+            \     '\(\k\+\)\.': '\1->',
+            \     '\(\k\+\)->': '\1.',
+            \    }
             \ ]
 "
 "
@@ -48,6 +44,9 @@ set encoding=utf-8
 set laststatus=2
 
 " Begin my config
+let mapleader = " "
+let g:mapleader = " "
+
 set nocompatible
 filetype plugin indent on
 set smartindent
