@@ -5,6 +5,7 @@ filetype off                  " required
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'AndrewRadev/switch.vim'
+Plugin 'bkad/CamelCaseMotion'
 "Plugin 'bling/vim-airline'
 Plugin 'chriskempson/base16-vim'
 Plugin 'editorconfig/editorconfig-vim'
@@ -23,8 +24,13 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 "----------------------------------------------------------------------------------------------
+"
+"CamelCase Motion settings
+map <S-W> <Plug>CamelCaseMotion_w
+map <S-B> <Plug>CamelCaseMotion_b
+map <S-E> <Plug>CamelCaseMotion_e
 
-"switch between camelCase and under_score
+"switch between this.that and this->that
 let g:switch_mapping = "<leader>,"
 let b:switch_custom_definitions = [
             \   {
@@ -68,6 +74,13 @@ set nu
 nnoremap  ; :
 inoremap jk <esc>
 inoremap kj <esc>
+
+"Change the keys for scrolling the entire screen                                                         
+nnoremap J L 
+nnoremap K H 
+nnoremap H J 
+nnoremap L K 
+
 "Use minus to jump to end of line.
 nnoremap - $
 onoremap - $
