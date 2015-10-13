@@ -21,6 +21,7 @@ ln -s $CONFIG/zshrc $HOME/.zshrc
 ln -s $CONFIG/aliases $HOME/.aliases
 ln -s $CONFIG/variables $HOME/.variables
 ln -s $CONFIG/Xresources $HOME/.Xresources
+ln -s $CONFIG/tmux.conf $HOME/.tmux.conf
 
 . $CONFIG/aliases
 

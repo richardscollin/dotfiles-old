@@ -15,4 +15,4 @@
 	s    = status
 	st   = status
 [help]
-	autocorrect = 10
+	autocorrect = 25
