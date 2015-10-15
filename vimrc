@@ -60,7 +60,6 @@ set tabstop=8
 set shiftwidth=4
 set softtabstop=4
 set expandtab
-set colorcolumn=80
 
 set wildmenu
 set cursorline
@@ -95,8 +94,8 @@ autocmd BufNewFile *.rs 0r ~/config/skeleton.rs
 autocmd BufNewFile Makefile 0r ~/config/skeleton.mak
 
 autocmd BufNewFile,BufNew,BufRead *.txt set spell
-autocmd BufNewFile,BufNew,BufRead *.txt set wrap
-autocmd BufNewFile,BufNew,BufRead *.txt set linebreak
+autocmd BufNewFile,BufNew,BufRead *.txt,*.html,*.md set wrap linebreak
+autocmd BufNewFile,BufNew,BufRead *.c set colorcolumn=80
 
 "Ctags settings
 set tags=./tags,tags
