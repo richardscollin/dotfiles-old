@@ -92,10 +92,19 @@ autocmd BufNewFile *.c 0r ~/config/skeleton.c
 autocmd BufNewFile *.tex 0r ~/config/skeleton.tex
 autocmd BufNewFile *.java 0r ~/config/skeleton.java
 autocmd BufNewFile *.rs 0r ~/config/skeleton.rs
+autocmd BufNewFile Makefile 0r ~/config/skeleton.mak
 
 autocmd BufNewFile,BufNew,BufRead *.txt set spell
 autocmd BufNewFile,BufNew,BufRead *.txt set wrap
 autocmd BufNewFile,BufNew,BufRead *.txt set linebreak
+
+"Ctags settings
+set tags=./tags,tags
+
+"Autocomplete
+inoreab if@ if () {<cr>}<esc>kf(a:call getchar()<cr>
+inoreab #i #include ""<left>:call getchar()<cr>
+
 
 if has("xterm_clipboard")
     set clipboard=unnamedplus
