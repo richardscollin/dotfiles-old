@@ -5,5 +5,4 @@ $(MAIN): $(OBJECTS)
 
 .PHONY: clean
 clean:
-	rm $(OBJECTS) $(EXECUTABLE)
-
+	rm $(OBJECTS) $(MAIN)

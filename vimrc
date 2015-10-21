@@ -6,8 +6,6 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'AndrewRadev/switch.vim'
 Plugin 'bkad/CamelCaseMotion'
-"Plugin 'bling/vim-airline'
-Plugin 'chriskempson/base16-vim'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'gmarik/Vundle.vim'
 Plugin 'mattn/emmet-vim'
@@ -30,6 +28,9 @@ map <S-W> <Plug>CamelCaseMotion_w
 map <S-B> <Plug>CamelCaseMotion_b
 map <S-E> <Plug>CamelCaseMotion_e
 
+"Disable powerline
+"let g:powerline_loaded = 1
+
 "switch between this.that and this->that
 let g:switch_mapping = "<leader>,"
 let b:switch_custom_definitions = [
@@ -38,13 +39,7 @@ let b:switch_custom_definitions = [
             \     '\(\k\+\)->': '\1.',
             \    }
             \ ]
-"
-"
-"Colorscheme stuff
-"set background=dark
-"colorscheme base16-default
-"let base16colorspace=256
-"Airline Settings
+" Statusline
 set t_Co=256
 set encoding=utf-8
 set laststatus=2
@@ -69,7 +64,7 @@ syntax on
 set nojoinspaces
 set nowrap
 set nu
-"set rnu
+set rnu
 " Custom mappings
 nnoremap  ; :
 inoremap jk <esc>
