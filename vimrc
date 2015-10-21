@@ -82,11 +82,11 @@ onoremap - $
 nnoremap j gj
 nnoremap k gk
 cnoremap q1 q!
-autocmd BufNewFile *.c 0r ~/config/skeleton.c
-autocmd BufNewFile *.tex 0r ~/config/skeleton.tex
-autocmd BufNewFile *.java 0r ~/config/skeleton.java
-autocmd BufNewFile *.rs 0r ~/config/skeleton.rs
-autocmd BufNewFile Makefile 0r ~/config/skeleton.mak
+autocmd BufNewFile *.c 0r ~/config/skel/skeleton.c
+autocmd BufNewFile *.tex 0r ~/config/skel/skeleton.tex
+autocmd BufNewFile *.java 0r ~/config/skel/skeleton.java
+autocmd BufNewFile *.rs 0r ~/config/skel/skeleton.rs
+autocmd BufNewFile Makefile 0r ~/config/skel/skeleton.mak
 
 autocmd BufNewFile,BufNew,BufRead *.txt set spell
 autocmd BufNewFile,BufNew,BufRead *.txt,*.html,*.md set wrap linebreak
