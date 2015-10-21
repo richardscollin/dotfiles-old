@@ -20,6 +20,7 @@ alias sx="startx "
 alias u="unzip"
 alias v="vim"
 alias x="tar xzvf"
+alias z="zathura"
 
 alias neo=nvim
 
