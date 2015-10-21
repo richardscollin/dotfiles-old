@@ -12,6 +12,9 @@
 	co   = commit
 	d    = diff
 	hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+        ph   = push
+        pl   = pull
+        ps   = push
 	s    = status
 	st   = status
 [help]
