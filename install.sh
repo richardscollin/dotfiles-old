@@ -1,40 +1,44 @@
 #!/bin/bash
+
 CONFIG=$HOME/config
 
 mkdir -p $HOME/bin $HOME/.config/awesome $HOME/.vim/bundle
 
-#install Vundle for vim
-VUNDLE_INSTALL=~/.vim/bundle/Vundle.vim
-if [ -d "$VUNDLE_INSTALL" ];then
-    pushd "$VUNDLE_INSTALL"
+function install_update_repo {
+# will install or update the git repo to the given directory
+# install_update_repo url directory
+if [ -d "$2" ];then
+    pushd "$2" >/dev/null
+    echo $1
     git pull
-    popd
+    popd >/dev/null
 else
-    git clone https://github.com/gmarik/Vundle.vim.git "$VUNDLE_INSTALL"
+    git clone "$1" "$2"
 fi
+}
 
-#install base16 shell
-BASE16_INSTALL=~/.config/base16-shell
-if [ -d "$BASE16_INSTALL" ];then
-    pushd "$BASE16_INSTALL"
-    git pull
-    popd
-else
-    git clone https://github.com/chriskempson/base16-shell.git "$BASE_16"
-fi
+install_update_repo https://github.com/gmarik/Vundle.vim.git "$HOME/.vim/bundle/Vundle.vim"
+install_update_repo https://github.com/chriskempson/base16-shell "$HOME/.config/base16-shell"
+install_update_repo https://github.com/powerline/fonts "$HOME/fonts"
 
 #install patched fonts
-#git clone https://github.com/powerline/fonts
 
-ln -s $CONFIG/vimrc $HOME/.vimrc
-ln -s $CONFIG/rc.lua $HOME/.config/awesome/rc.lua
-ln -s $CONFIG/gitconfig $HOME/.gitconfig
+function mksymlink {
+# will make the symlink onlt if the file doesn't exist
+# mkksymlink target linkname
+if [ ! -f "$2" ];then
+    ln -s "$1" "$2"
+fi
+}
 
-ln -s $CONFIG/zshrc $HOME/.zshrc
-ln -s $CONFIG/aliases $HOME/.aliases
-ln -s $CONFIG/variables $HOME/.variables
-ln -s $CONFIG/Xresources $HOME/.Xresources
-ln -s $CONFIG/tmux.conf $HOME/.tmux.conf
+mksymlink $CONFIG/Xresources $HOME/.Xresources
+mksymlink $CONFIG/aliases $HOME/.aliases
+mksymlink $CONFIG/gitconfig $HOME/.gitconfig
+mksymlink $CONFIG/rc.lua $HOME/.config/awesome/rc.lua
+mksymlink $CONFIG/tmux.conf $HOME/.tmux.conf
+mksymlink $CONFIG/variables $HOME/.variables
+mksymlink $CONFIG/vimrc $HOME/.vimrc
+mksymlink $CONFIG/zshrc $HOME/.zshrc
 
 . $CONFIG/aliases
 

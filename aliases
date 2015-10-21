@@ -14,12 +14,11 @@ alias r=rustc
 alias s="sudo "
 alias shit="shutdown -h now"
 alias sl=ls
-alias sudo="sudo "
+alias sudo="sudo " # makes aliases work with sudo
 alias sx="startx "
 alias u="unzip"
 alias v="vim"
 alias x="tar xzvf"
 
 alias neo=nvim
-alias z3="scala -classpath $HOME/research/ScalaZ3/target/scala-2.10/scalaz3_2.10-2.1.jar"
 
