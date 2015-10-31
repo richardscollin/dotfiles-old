@@ -31,6 +31,14 @@ map <S-E> <Plug>CamelCaseMotion_e
 "Disable powerline
 "let g:powerline_loaded = 1
 
+function! FormatFile()
+  let l:lines="all"
+  if filereadable("/usr/share/clang/clang-format.py")
+      pyf /usr/share/clang/clang-format.py
+  endif
+endfunction
+command Format call FormatFile()
+
 "switch between this.that and this->that
 let g:switch_mapping = "<leader>,"
 let b:switch_custom_definitions = [
@@ -82,11 +90,11 @@ onoremap - $
 nnoremap j gj
 nnoremap k gk
 cnoremap q1 q!
-autocmd BufNewFile *.c 0r ~/config/skel/skeleton.c
-autocmd BufNewFile *.tex 0r ~/config/skel/skeleton.tex
-autocmd BufNewFile *.java 0r ~/config/skel/skeleton.java
-autocmd BufNewFile *.rs 0r ~/config/skel/skeleton.rs
-autocmd BufNewFile Makefile 0r ~/config/skel/skeleton.mak
+autocmd BufNewFile *.c 0r ~/g/skel/skeleton.c
+autocmd BufNewFile *.tex 0r ~/g/skel/skeleton.tex
+autocmd BufNewFile *.java 0r ~/g/skel/skeleton.java
+autocmd BufNewFile *.rs 0r ~/g/skel/skeleton.rs
+autocmd BufNewFile Makefile 0r ~/g/skel/skeleton.mak
 
 autocmd BufNewFile,BufNew,BufRead *.txt set spell
 autocmd BufNewFile,BufNew,BufRead *.txt,*.html,*.md set wrap linebreak

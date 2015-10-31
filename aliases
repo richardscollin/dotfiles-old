@@ -17,10 +17,10 @@ alias shit="shutdown -h now"
 alias sl=ls
 alias sudo="sudo " # makes aliases work with sudo
 alias sx="startx "
+alias t="tmux"
 alias u="unzip"
 alias v="vim"
 alias x="tar xzvf"
 alias z="zathura"
 
 alias neo=nvim
-

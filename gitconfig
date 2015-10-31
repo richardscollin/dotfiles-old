@@ -9,7 +9,7 @@
 	c    = commit
 	ch   = checkout
 	ci   = commit
-	co   = commit
+	co   = checkout
 	d    = diff
 	hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
         ph   = push
