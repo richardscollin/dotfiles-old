@@ -29,23 +29,3 @@ URxvt.keysym.C-S-V:                     perl:clipboard:paste
 URxvt.keysym.C-S-plus:                  perl:font-size:increase
 URxvt.keysym.C-S-underscore:            perl:font-size:decrease
 
-!tab settings
-URxvt.tabbed.autohide:                  true
-URxvt.tabbed.no-tabbedex-keys:          true
-URxvt.keysym.M-t:                       perl:tabbedex:new_tab
-URxvt.keysym.C-S-T:                     perl:tabbedex:new_tab
-URxvt.keysym.M-k:                       perl:tabbedex:next_tab
-URxvt.keysym.M-j:                       perl:tabbedex:prev_tab
-URxvt.keysym.C-S-J:                     perl:tabbedex:move_tab_left
-URxvt.keysym.C-S-K:                     perl:tabbedex:move_tab_right
-
-!tab colors
-URxvt.tabbed.title-fg:                  3
-URxvt.tabbed.title-bg:                  0
-
-URxvt.tabbed.tabbar-fg:                 6
-URxvt.tabbed.tabbar-bg:                 0
-
-URxvt.tabbed.tab-fg:                    3
-URxvt.tabbed.tab-bg:                    0
-
