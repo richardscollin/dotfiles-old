@@ -18,6 +18,7 @@ fi
 
 install_update_repo https://github.com/gmarik/Vundle.vim.git "$HOME/.vim/bundle/Vundle.vim"
 install_update_repo https://github.com/chriskempson/base16-shell "$HOME/.config/base16-shell"
+install_update_repo https://github.com/robbyrussel/oh-my-shell "$HOME/.oh-my-zsh"
 install_update_repo https://github.com/powerline/fonts "$HOME/fonts"
 "$HOME/fonts/install.sh"
 
@@ -40,6 +41,8 @@ mksymlink $CONFIG/rc.lua $HOME/.config/awesome/rc.lua
 mksymlink $CONFIG/tmux.conf $HOME/.tmux.conf
 mksymlink $CONFIG/variables $HOME/.variables
 mksymlink $CONFIG/vimrc $HOME/.vimrc
+mksymlink $CONFIG/xinitrc $HOME/.xinitrc
+mksymlink $CONFIG/xbindkeysrc $HOME/.xbindkeysrc
 mksymlink $CONFIG/zshrc $HOME/.zshrc
 
 . $CONFIG/aliases

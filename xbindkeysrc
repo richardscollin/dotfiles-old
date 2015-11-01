@@ -1,0 +1,12 @@
+"amixer -c 1 set Master toggle"
+    m:0x0 + c:74
+    XF86AudioMute
+"amixer -c 1 set Master 10-"
+    m:0x0 + c:75
+    XF86AudioLowerVolume
+"amixer -c 1 set Master 10+"
+    m:0x0 + c:76
+    XF86AudioRaiseVolume
+"partytime"
+    m:0x0 + c:124
+    XF86PowerOff
