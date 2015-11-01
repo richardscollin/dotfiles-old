@@ -29,3 +29,4 @@ URxvt.keysym.C-S-V:                     perl:clipboard:paste
 URxvt.keysym.C-S-plus:                  perl:font-size:increase
 URxvt.keysym.C-S-underscore:            perl:font-size:decrease
 
+URxvt.tabbed.autohide:                  true
