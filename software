@@ -1,6 +1,5 @@
 acpi
 alsa-utils
-apache-ant
 autojump
 awesome
 base-devel
@@ -13,18 +12,16 @@ git
 gdb
 gvim
 gutenprint
+imagemagick
 java-environment
 junit
 mplayer
 nmap
 openssh
-roxterm
-sbt
-scala
-ssmtp
 strace
 svn
 texlive-most
+tmux
 wget
 wpa_supplicant
 xorg
@@ -37,4 +34,4 @@ zip
 unzip
 xorg-xlsfonts
 xsel
-
+xterm

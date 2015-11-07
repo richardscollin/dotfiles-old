@@ -1,7 +1,7 @@
 #!/bin/bash
-CONFIG=$HOME/g
+CONFIG=$HOME/config
 
-mkdir -p $HOME/b $HOME/.config/awesome $HOME/.vim/bundle
+mkdir -p $HOME/bin $HOME/.config/awesome $HOME/.vim/bundle
 
 function install_update_repo {
 # will install or update the git repo to the given directory
@@ -18,7 +18,7 @@ fi
 
 install_update_repo https://github.com/gmarik/Vundle.vim.git "$HOME/.vim/bundle/Vundle.vim"
 install_update_repo https://github.com/chriskempson/base16-shell "$HOME/.config/base16-shell"
-install_update_repo https://github.com/robbyrussel/oh-my-shell "$HOME/.oh-my-zsh"
+install_update_repo https://github.com/robbyrussell/oh-my-zsh "$HOME/.oh-my-zsh"
 install_update_repo https://github.com/powerline/fonts "$HOME/fonts"
 "$HOME/fonts/install.sh"
 
