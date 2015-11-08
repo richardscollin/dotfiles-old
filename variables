@@ -1,3 +1,4 @@
+export CONFIG="$HOME/config"
 export EDITOR='vim'
 export POWERLINE_DIR='/usr/lib/python2.7/site-packages/powerline'
 export POWERLINE_COMMAND="powerline"

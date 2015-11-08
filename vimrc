@@ -53,8 +53,8 @@ set encoding=utf-8
 set laststatus=2
 
 " Begin my config
-let mapleader = " "
-let g:mapleader = " "
+let mapleader = ","
+let g:mapleader = ","
 
 set nocompatible
 filetype plugin indent on
@@ -83,6 +83,8 @@ nnoremap J L
 nnoremap K H 
 nnoremap H J 
 nnoremap L K 
+nnoremap <space> <C-d>
+nnoremap <backspace> <C-u>
 
 "Use minus to jump to end of line.
 nnoremap - $
@@ -91,10 +93,10 @@ nnoremap j gj
 nnoremap k gk
 cnoremap q1 q!
 autocmd BufNewFile *.c 0r ~/config/skel/skeleton.c
-autocmd BufNewFile *.tex 0r ~config/skel/skeleton.tex
-autocmd BufNewFile *.java 0r ~config/skel/skeleton.java
-autocmd BufNewFile *.rs 0r ~config/skel/skeleton.rs
-autocmd BufNewFile Makefile 0r ~config/skel/skeleton.mak
+autocmd BufNewFile *.tex 0r ~/config/skel/skeleton.tex
+autocmd BufNewFile *.java 0r ~/config/skel/skeleton.java
+autocmd BufNewFile *.rs 0r ~/config/skel/skeleton.rs
+autocmd BufNewFile Makefile 0r ~/config/skel/skeleton.mak
 
 autocmd BufNewFile,BufNew,BufRead *.txt set spell
 autocmd BufNewFile,BufNew,BufRead *.txt,*.html,*.md set wrap linebreak

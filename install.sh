@@ -34,6 +34,7 @@ fi
 
 mksymlink $CONFIG/Xresources $HOME/.Xresources
 mksymlink $CONFIG/aliases $HOME/.aliases
+mksymlink $CONFIG/asoundrc $HOME/.asoundrc
 mksymlink $CONFIG/clang-format $HOME/.clang-format
 mksymlink $CONFIG/gitconfig $HOME/.gitconfig
 mksymlink $CONFIG/powerline $HOME/.config/powerline

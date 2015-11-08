@@ -18,9 +18,11 @@ junit
 mplayer
 nmap
 openssh
+pianobar
 strace
 svn
 texlive-most
+the_silver_searcher
 tmux
 wget
 wpa_supplicant
@@ -31,7 +33,11 @@ zathura
 zathura-pdf-poppler
 zsh
 zip
+rxvt-unicode
+urvxt-perls
 unzip
 xorg-xlsfonts
 xsel
 xterm
+xbindkeys
+xdotool
