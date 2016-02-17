@@ -1,6 +1,8 @@
 # If not running interactively, do not do anything
 [[ $- != *i* ]] && return
-#[[ "$TERM" != "linux" ]] && [[ -z "$TMUX" ]] && exec tmux
+if which tmux >/dev/null 2>&1; then
+    [[ "$TERM" != "linux" ]] && [[ -z "$TMUX" ]] && exec tmux
+fi
 # Path to your oh-my-zsh installation.
 export ZSH=/home/collin/.oh-my-zsh
 DISABLE_AUTO_UPDATE=true
