@@ -38,7 +38,6 @@ mksymlink $CONFIG/asoundrc $HOME/.asoundrc
 mksymlink $CONFIG/clang-format $HOME/.clang-format
 mksymlink $CONFIG/gitconfig $HOME/.gitconfig
 mksymlink $CONFIG/powerline $HOME/.config/powerline
-mksymlink $CONFIG/rc.lua $HOME/.config/awesome/rc.lua
 mksymlink $CONFIG/tmux.conf $HOME/.tmux.conf
 mksymlink $CONFIG/variables $HOME/.variables
 mksymlink $CONFIG/vimrc $HOME/.vimrc
