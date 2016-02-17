@@ -1,0 +1,5 @@
+new $SHELL
+splitw -h -p 50 weechat
+splitw -v -l 2  pianobar
+selectw -t 1
+selectp -t 0
