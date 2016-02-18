@@ -1,4 +1,3 @@
-
 "----------------------------------------------------------------------------------------------
 set nocompatible              " required
 filetype off                  " required
@@ -32,7 +31,7 @@ map <S-E> <Plug>CamelCaseMotion_e
 
 "Disable powerline
 "let g:powerline_loaded = 1
-"py3 "~/.local/lib/python3.5/site-packages/powerline/vim.py"
+set rtp+=${POWERLINE_DIR}/bindings/vim
 
 function! FormatFile()
   let l:lines="all"
@@ -76,7 +75,7 @@ syntax on
 set nojoinspaces
 set nowrap
 set nu
-set rnu
+"set rnu
 " Custom mappings
 nnoremap  ; :
 inoremap jk <esc>

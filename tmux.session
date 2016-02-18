@@ -1,4 +1,4 @@
-new $SHELL
+new-window $SHELL
 splitw -h -p 50 weechat
 splitw -v -l 2  pianobar
 selectw -t 1
