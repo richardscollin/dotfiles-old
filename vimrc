@@ -68,7 +68,7 @@ set expandtab
 
 set mouse=a
 set wildmenu
-set cursorline
+set nocursorline "decreases latency on large files
 set backspace=2 "need for proper backspace behavoir in neovim
 
 syntax on
@@ -104,7 +104,7 @@ autocmd BufNewFile,BufNew,BufRead *.txt,*.html,*.md set wrap linebreak
 autocmd BufNewFile,BufNew,BufRead *.c set colorcolumn=80
 
 "let's you use :make for to pdflatex
-autocmd FileType tex setlocal makeprg=pdflatex\ --shell-escape\ '%'
+autocmd FileType tex setlocal makeprg=pdflatex\ \ -synctex=1\ --shell-escape\ '%'
 
 "Compile keybinding
 nnoremap <F5> :make<CR>
@@ -124,6 +124,12 @@ function! IncludeGuard()
     put ='#define ' . l:name
     put ='#endif /* ' . l:name . ' */'
 endfunction
+
+function! Synctex()
+        " remove 'silent' for debugging
+        execute "silent !zathura --synctex-forward " . line('.') . ":" . col('.') . ":" . bufname('%') . " " . g:syncpdf
+endfunction
+nnoremap <leader><cr> :call Synctex()<cr>
 
 if has("xterm_clipboard")
     set clipboard=unnamedplus

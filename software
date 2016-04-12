@@ -1,6 +1,5 @@
 acpi
 alsa-utils
-autojump
 awesome
 base-devel
 ctags
@@ -19,6 +18,7 @@ mplayer
 nmap
 openssh
 pianobar
+ranger
 strace
 svn
 texlive-most

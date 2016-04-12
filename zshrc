@@ -10,10 +10,6 @@ fi
 export ZSH=/home/collin/.oh-my-zsh
 DISABLE_AUTO_UPDATE=true
 
-if [[ -a "$HOME/.aliases" ]];then
-    source "$HOME/.aliases"
-fi
-
 plugins=(git autojump)
 
 if [ "$TERM" = "rxvt-unicode-256color" ] || [ "$TERM" = "screen-256color" ] ;then
@@ -21,6 +17,10 @@ if [ "$TERM" = "rxvt-unicode-256color" ] || [ "$TERM" = "screen-256color" ] ;the
 fi
 
 source $ZSH/oh-my-zsh.sh
+
+if [[ -a "$HOME/.aliases" ]];then
+    source "$HOME/.aliases"
+fi
 
 # make tab-completion the same color as ls
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
