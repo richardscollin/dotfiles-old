@@ -37,5 +37,5 @@ mksymlink $CONFIG/clang-format $HOME/.clang-format
 mksymlink $CONFIG/powerline $HOME/.config/powerline
 mksymlink $CONFIG/xinitrc $HOME/.xinitrc
 
-. $CONFIG/aliases
+. ~/.aliases
 

@@ -1,4 +1,5 @@
 export CONFIG="$HOME/config"
+export CFLAGS="-Wall"
 export EDITOR='vim'
 export JAVA_HOME='/usr/lib/jvm/default'
 export POWERLINE_DIR='/usr/lib/python3.5/site-packages/powerline'

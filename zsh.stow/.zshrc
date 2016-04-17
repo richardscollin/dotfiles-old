@@ -7,7 +7,7 @@ if which tmux >/dev/null 2>&1; then
     [[ "$TERM" != "linux" ]] && [[ -z "$TMUX" ]] && exec tmux
 fi
 # Path to your oh-my-zsh installation.
-export ZSH=/home/collin/.oh-my-zsh
+export ZSH="$HOME/.oh-my-zsh"
 DISABLE_AUTO_UPDATE=true
 
 plugins=(git autojump)
