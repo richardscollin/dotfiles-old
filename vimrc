@@ -106,6 +106,10 @@ autocmd BufNewFile,BufNew,BufRead *.c set colorcolumn=80
 "let's you use :make for to pdflatex
 autocmd FileType tex setlocal makeprg=pdflatex\ \ -synctex=1\ --shell-escape\ '%'
 
+" shortcut to run shell commands
+inoremap <c-e> <esc>:r!
+nnoremap <c-e> <esc>:r!
+
 "Compile keybinding
 nnoremap <F5> :make<CR>
 
