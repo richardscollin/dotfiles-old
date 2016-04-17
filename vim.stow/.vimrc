@@ -91,13 +91,13 @@ onoremap - $
 nnoremap j gj
 nnoremap k gk
 cnoremap q1 q!
-autocmd BufNewFile *.c 0r ~/config/skel/skeleton.c
+autocmd BufNewFile *.c 0r ~/.vim/skel/skeleton.c
 autocmd BufNewFile *.h :call IncludeGuard()
-autocmd BufNewFile *.html 0r ~/config/skel/skeleton.html
-autocmd BufNewFile *.java 0r ~/config/skel/skeleton.java
-autocmd BufNewFile *.rs 0r ~/config/skel/skeleton.rs
-autocmd BufNewFile *.tex 0r ~/config/skel/skeleton.tex
-autocmd BufNewFile Makefile 0r ~/config/skel/skeleton.mak
+autocmd BufNewFile *.html 0r ~/.vim/skel/skeleton.html
+autocmd BufNewFile *.java 0r ~/.vim/skel/skeleton.java
+autocmd BufNewFile *.rs 0r ~/.vim/skel/skeleton.rs
+autocmd BufNewFile *.tex 0r ~/.vim/skel/skeleton.tex
+autocmd BufNewFile Makefile 0r ~/.vim/skel/skeleton.mak
 
 autocmd BufNewFile,BufNew,BufRead *.txt set spell
 autocmd BufNewFile,BufNew,BufRead *.txt,*.html,*.md set wrap linebreak

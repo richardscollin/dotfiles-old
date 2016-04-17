@@ -33,17 +33,9 @@ fi
 }
 
 mksymlink $CONFIG/Xresources $HOME/.Xresources
-mksymlink $CONFIG/aliases $HOME/.aliases
-mksymlink $CONFIG/asoundrc $HOME/.asoundrc
 mksymlink $CONFIG/clang-format $HOME/.clang-format
-mksymlink $CONFIG/gitconfig $HOME/.gitconfig
 mksymlink $CONFIG/powerline $HOME/.config/powerline
-mksymlink $CONFIG/tmux.conf $HOME/.tmux.conf
-mksymlink $CONFIG/variables $HOME/.variables
-mksymlink $CONFIG/vimrc $HOME/.vimrc
 mksymlink $CONFIG/xinitrc $HOME/.xinitrc
-mksymlink $CONFIG/xbindkeysrc $HOME/.xbindkeysrc
-mksymlink $CONFIG/zshrc $HOME/.zshrc
 
 . $CONFIG/aliases
 

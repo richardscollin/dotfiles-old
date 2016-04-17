@@ -29,6 +29,7 @@ depends=(
 'pianobar'
 'pwgen'
 'ranger'
+'stow'
 'strace'
 'sudo'
 'the_silver_searcher'
