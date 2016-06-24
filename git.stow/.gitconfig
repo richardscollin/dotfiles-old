@@ -19,3 +19,5 @@
 	st   = status
 [help]
 	autocorrect = 25
+[color]
+	ui = auto
