@@ -12,9 +12,10 @@
 	co   = checkout
 	d    = diff
 	hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
-        ph   = push
-        pl   = pull
-        ps   = push
+	ol   = log --oneline
+	ph   = push
+	pl   = pull
+	ps   = push
 	s    = status
 	st   = status
 [help]
