@@ -8,10 +8,12 @@ Plugin 'bkad/CamelCaseMotion'
 "Plugin 'editorconfig/editorconfig-vim'
 Plugin 'gmarik/Vundle.vim'
 Plugin 'mattn/emmet-vim'
+Plugin 'mickaobrien/vim-stackoverflow'
+Plugin 'noahfrederick/vim-skeleton'
 Plugin 'rust-lang/rust.vim'
-"Plugin 'scrooloose/syntastic'
-Plugin 'tpope/vim-surround'
+Plugin 'scrooloose/syntastic'
 Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-vinegar'
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -91,14 +93,10 @@ onoremap - $
 nnoremap j gj
 nnoremap k gk
 cnoremap q1 q!
-autocmd BufNewFile *.c 0r ~/.vim/skel/skeleton.c
-autocmd BufNewFile *.h :call IncludeGuard()
-autocmd BufNewFile *.html 0r ~/.vim/skel/skeleton.html
-autocmd BufNewFile *.java 0r ~/.vim/skel/skeleton.java
-autocmd BufNewFile *.rs 0r ~/.vim/skel/skeleton.rs
-autocmd BufNewFile *.tex 0r ~/.vim/skel/skeleton.tex
-autocmd BufNewFile Makefile 0r ~/.vim/skel/skeleton.mak
 
+"File specific settings
+autocmd BufNewFile Makefile 0r ~/.vim/template/skel/skel.mak
+autocmd BufNewFile *.h :call IncludeGuard()
 autocmd BufNewFile,BufNew,BufRead *.txt set spell
 autocmd BufNewFile,BufNew,BufRead *.txt,*.html,*.md set wrap linebreak
 autocmd BufNewFile,BufNew,BufRead *.c set colorcolumn=80
@@ -109,12 +107,17 @@ autocmd FileType tex setlocal makeprg=pdflatex\ \ -synctex=1\ --shell-escape\ '%
 " shortcut to run shell commands
 inoremap <c-e> <esc>:r!
 nnoremap <c-e> <esc>:r!
+nnoremap <leader>r <esc>:r!
 
 "Compile keybinding
 nnoremap <F5> :make<CR>
 
 "Ctags settings
 set tags=./tags,tags,~/kernel/linux-4.0.6/tags
+
+"I prefer text formatted a width of 60 because that's how
+"much a terminal taking up half of my screen can fit
+set formatprg=fmt\ -60
 
 "Autocomplete
 inoreab if@ if () {<cr>}<esc>kf(a:call getchar()<cr>
@@ -124,9 +127,9 @@ inoreab sop System.out.println
 
 function! IncludeGuard()
     let l:name = substitute(toupper(expand('%:t')), '\.', '_', 'g')
-    put ='#ifndef ' . l:name
-    put ='#define ' . l:name
-    put ='#endif /* ' . l:name . ' */'
+    put! ='#endif /* ' . l:name . ' */'
+    put! ='#define ' . l:name
+    put! ='#ifndef ' . l:name
 endfunction
 
 function! Synctex()
