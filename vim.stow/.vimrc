@@ -95,7 +95,7 @@ nnoremap k gk
 cnoremap q1 q!
 
 "File specific settings
-autocmd BufNewFile Makefile 0r ~/.vim/template/skel/skel.mak
+autocmd BufNewFile Makefile 0r ~/.vim/templates/skel.mak
 autocmd BufNewFile *.h :call IncludeGuard()
 autocmd BufNewFile,BufNew,BufRead *.txt set spell
 autocmd BufNewFile,BufNew,BufRead *.txt,*.html,*.md set wrap linebreak
