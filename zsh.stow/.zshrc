@@ -4,7 +4,7 @@ if [[ -a "$HOME/.variables" ]];then
     source "$HOME/.variables"
 fi
 if which tmux >/dev/null 2>&1; then
-    [[ "$TERM" != "linux" ]] && [[ "$TERM" != "xterm" ]] && [[ -z "$TMUX" ]] && exec tmux
+    [[ "$TERM" != "linux" ]] && [[ -z "$TMUX" ]] && exec tmux
 fi
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
