@@ -1,7 +1,7 @@
 #!/bin/bash
 CONFIG=$HOME/config
 
-mkdir -p $HOME/bin $HOME/.config/awesome $HOME/.vim/bundle
+mkdir -p $HOME/bin $HOME/.vim/bundle
 
 function install_update_repo {
 # will install or update the git repo to the given directory
