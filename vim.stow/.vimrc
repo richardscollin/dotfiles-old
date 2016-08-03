@@ -113,7 +113,7 @@ nnoremap <leader>r <esc>:r!
 nnoremap <F5> :make<CR>
 
 "Ctags settings
-set tags=./tags,tags,~/kernel/linux-4.0.6/tags
+set tags=./tags,tags,~/.vim/ctags/tags
 
 "I prefer text formatted a width of 60 because that's how
 "much a terminal taking up half of my screen can fit
