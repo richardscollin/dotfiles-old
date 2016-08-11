@@ -32,10 +32,8 @@ if [ ! -e "$2" ];then
 fi
 }
 
-mksymlink $CONFIG/Xresources $HOME/.Xresources
 mksymlink $CONFIG/clang-format $HOME/.clang-format
 mksymlink $CONFIG/powerline $HOME/.config/powerline
-mksymlink $CONFIG/xinitrc $HOME/.xinitrc
 
 . ~/.aliases
 
