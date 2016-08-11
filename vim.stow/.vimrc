@@ -124,12 +124,6 @@ function! IncludeGuard()
     put! ='#ifndef ' . l:name
 endfunction
 
-function! Synctex()
-        " remove 'silent' for debugging
-        execute "silent !zathura --synctex-forward " . line('.') . ":" . col('.') . ":" . bufname('%') . " " . g:syncpdf
-endfunction
-nnoremap <leader><cr> :call Synctex()<cr>
-
 if has("xterm_clipboard")
     set clipboard=unnamedplus
 endif
