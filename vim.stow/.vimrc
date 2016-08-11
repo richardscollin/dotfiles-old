@@ -35,14 +35,6 @@ map <S-E> <Plug>CamelCaseMotion_e
 "let g:powerline_loaded = 1
 set rtp+=${POWERLINE_DIR}/bindings/vim
 
-function! FormatFile()
-  let l:lines="all"
-  if filereadable("/usr/share/clang/clang-format.py")
-      pyf /usr/share/clang/clang-format.py
-  endif
-endfunction
-command Format call FormatFile()
-
 "switch between this.that and this->that
 let g:switch_mapping = "<leader>,"
 let b:switch_custom_definitions = [
