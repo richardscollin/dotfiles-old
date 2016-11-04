@@ -1,5 +1,5 @@
 pkgname=collin-meta
-pkgver=0.1
+pkgver=0.2
 pkgrel=1
 pkgdesc="A meta-package for managing my dependences"
 arch=('any')
@@ -15,6 +15,7 @@ depends=(
 'firefox'
 'gdb'
 'git'
+'gnome-terminal'
 'graphviz'
 'gutenprint'
 'gvim'
@@ -34,11 +35,12 @@ depends=(
 'strace'
 'sudo'
 'the_silver_searcher'
+'thunderbird'
 'tmux'
 'ttf-ubuntu-font-family'
+'ttf-ms-fonts'
 'unzip'
 'util-linux'
-'weechat'
 'xclip'
 'xorg-xinit'
 'xterm'
