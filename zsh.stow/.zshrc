@@ -25,7 +25,21 @@ fi
 # make tab-completion the same color as ls
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 
-BASE16_SHELL="$HOME/.config/base16-shell/base16-default.light.sh"
+is_night()
+{
+    # Assumes that it's night if it's past 6
+    if [ $(date '+%k') -ge 18 ];then
+        return 0
+    else
+        return 1
+    fi
+}
+
+BASE16_SHELL="$HOME/.config/base16-shell/base16-tomorrow.light.sh"
+if is_night; then
+    BASE16_SHELL="$HOME/.config/base16-shell/base16-tomorrow.dark.sh"
+fi
+
 [[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
 
 # ls after every cd
@@ -35,3 +49,6 @@ function chpwd() {
 }
 
 ls
+
+# OPAM configuration
+. /home/collin/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
