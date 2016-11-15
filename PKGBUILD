@@ -5,7 +5,7 @@ pkgdesc="A meta-package for managing my dependences"
 arch=('any')
 url="http://github.com/richardscollin"
 license=('Unknown')
-groups=('base-devel' 'xorg' 'gnome' 'texlive-most')
+groups=('base-devel' 'xorg' 'xfce4' 'texlive-most')
 depends=(
 'acpi'
 'alsa-utils'
