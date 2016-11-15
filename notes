@@ -1,0 +1,11 @@
+GIT Cheat Sheet
+---------------
+- git add -p                                                            # only add some of the changes from a file
+- git reset --hard HEAD                                                 # Reset WD to Previous commit
+- git clean -f -n                                                       # Remove untracked files (dry-run)
+- git reset --hard HEAD~                                                # Delete last Commit
+- git format-patch <base-branch> --stdout > changes.patch               # Changes on seperate branch
+- git diff --full-index HEAD~ > changes.patch                           # Diff for review board
+- git push <remote> :dev/corichar/ptest-wrapper                         # delete remote branch
+- git archive --format=tar.gz --prefix=project/ HEAD > project.tar.gz   # package a repo
+- git send-email -1 --to meta-virtualization@yoctoproject.org --subject-prefix="meta-virtualization][PATCH"
