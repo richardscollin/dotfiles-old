@@ -19,10 +19,6 @@ fi
 install_update_repo https://github.com/gmarik/Vundle.vim.git "$HOME/.vim/bundle/Vundle.vim"
 install_update_repo https://github.com/chriskempson/base16-shell "$HOME/.config/base16-shell"
 install_update_repo https://github.com/robbyrussell/oh-my-zsh "$HOME/.oh-my-zsh"
-install_update_repo https://github.com/powerline/fonts "$HOME/fonts"
-"$HOME/fonts/install.sh"
-
-#install patched fonts
 
 function mksymlink {
 # will make the symlink onlt if the file doesn't exist

@@ -28,6 +28,8 @@ depends=(
 'openssh'
 'pandoc'
 'pianobar'
+'powerline'
+'powerline-fonts'
 'python-pip'
 'pwgen'
 'ranger'
