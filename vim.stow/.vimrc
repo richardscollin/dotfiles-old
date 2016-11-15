@@ -92,6 +92,8 @@ autocmd BufNewFile *.h :call IncludeGuard()
 autocmd BufNewFile,BufNew,BufRead *.txt set spell
 autocmd BufNewFile,BufNew,BufRead *.txt,*.html,*.md set wrap linebreak
 autocmd BufNewFile,BufNew,BufRead *.c set colorcolumn=80
+autocmd BufNewFile,BufNew,BufRead *.ml compiler ocaml
+autocmd BufNewFile,BufNew,BufRead *.caml compiler ocaml
 
 "let's you use :make for to pdflatex
 autocmd FileType tex setlocal makeprg=pdflatex\ \ -synctex=1\ --shell-escape\ '%'
