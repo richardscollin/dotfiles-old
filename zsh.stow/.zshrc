@@ -25,15 +25,7 @@ fi
 # make tab-completion the same color as ls
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 
-is_night()
-{
-    # Assumes that it's night if it's past 6
-    if [ $(date '+%k') -ge 18 ];then
-        return 0
-    else
-        return 1
-    fi
-}
+source ~/bin/mylib  # needed for is_night
 
 BASE16_SHELL="$HOME/.config/base16-shell/base16-tomorrow.light.sh"
 if is_night; then
