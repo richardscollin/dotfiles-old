@@ -22,6 +22,10 @@ if [[ -a "$HOME/.aliases" ]];then
     source "$HOME/.aliases"
 fi
 
+if [[ -a "$HOME/.emojis.zsh" ]];then
+    source "$HOME/.emojis.zsh"
+fi
+
 # make tab-completion the same color as ls
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 

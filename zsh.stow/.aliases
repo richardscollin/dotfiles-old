@@ -27,3 +27,4 @@ alias v="vim"
 alias x="tar xzvf"
 
 alias neo=nvim
+
