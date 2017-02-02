@@ -5,11 +5,15 @@ emojis=(
 cat 😸
 cd 📂
 date 🗓
-firefox 🦊
+firefox 🔥
 kill 🗡
 less 👓
+ln 🔗
+ls 🔍
+man 👨
 pacman ᗧ
 rm 🗑
+shit 💩
 tee 🏌
 top 🎩
 touch 🖐
