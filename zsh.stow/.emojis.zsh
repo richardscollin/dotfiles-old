@@ -23,9 +23,15 @@ done
 
 on_space (){
     for k in "${(@k)emojis}";do
-        LBUFFER="${LBUFFER/$k/${emojis[$k]}}"
+        if [[ "${LBUFFER}" =~ "\b${k}\b" ]];then
+            # this if statement isn't needed but it
+            # increases effiency by x10 because we can
+            # avoid forking the process on most cases
+            LBUFFER="$(echo "${LBUFFER}" | sed "s:\b${k}\b:${emojis[$k]}:")"
+        fi
     done
     LBUFFER="${LBUFFER} "
 }
+
 zle -N on_space
 bindkey " " on_space
