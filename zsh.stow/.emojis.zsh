@@ -10,7 +10,6 @@ kill 🗡
 less 👓
 ln 🔗
 ls 🔍
-man 👨
 pacman ᗧ
 rm 🗑
 shit 💩

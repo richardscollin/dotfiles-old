@@ -31,9 +31,9 @@ zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 
 source ~/bin/mylib  # needed for is_night
 
-BASE16_SHELL="$HOME/.config/base16-shell/base16-tomorrow.light.sh"
+BASE16_SHELL="$HOME/.config/base16-shell/base16-twilight.dark.sh"
 if is_night; then
-    BASE16_SHELL="$HOME/.config/base16-shell/base16-tomorrow.dark.sh"
+    BASE16_SHELL="$HOME/.config/base16-shell/base16-twilight.dark.sh"
 fi
 
 [[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
