@@ -15,6 +15,7 @@
 	ps   = push
 	s    = status
 	st   = status
+	last = for-each-ref --sort=committerdate --format='%(color:yellow)Branch:\t%(refname:short)%(color:white)\nDate:\t%(authordate)\nAuthor:\t%(authorname) %(authoremail)\n\n\t%(contents:subject)\n' refs/heads
 [help]
 	autocorrect = 25
 [color]
