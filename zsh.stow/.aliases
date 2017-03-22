@@ -22,7 +22,7 @@ alias sl=ls
 alias sudo="sudo " # makes aliases work with sudo
 alias sx="startx "
 alias t="tmux"
-alias u="unzip"
+alias u="sudo pacman -Syu"
 alias v="vim"
 alias x="tar xzvf"
 
