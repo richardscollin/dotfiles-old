@@ -33,7 +33,6 @@ depends=(
 'powerline-fonts'
 'python-pip'
 'pwgen'
-'ranger'
 'stow'
 'strace'
 'sudo'
@@ -53,6 +52,12 @@ depends=(
 'zathura-pdf-poppler'
 'zip'
 'zsh'
+)
+
+optdepends=(
+'gimp'
+'inkscape'
+'virtualbox'
 )
 
 provides=($pkgname)

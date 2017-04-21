@@ -1,0 +1,8 @@
+.cache
+.mozilla
+.thunderbird
+.vagrant.d
+.wine
+VirtualBox VMs
+iso
+share

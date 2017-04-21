@@ -9,3 +9,14 @@ GIT Cheat Sheet
 - git push <remote> :dev/corichar/ptest-wrapper                         # delete remote branch
 - git archive --format=tar.gz --prefix=project/ HEAD > project.tar.gz   # package a repo
 - git send-email -1 --to meta-virtualization@yoctoproject.org --subject-prefix="meta-virtualization][PATCH"
+
+One liners
+------------
+# Allow a certain user to access your machine
+curl https://github.com/username.keys >> ~/.ssh/authorized_keys
+
+# Unlock your ssh-key for the session
+ssh-add ~/.ssh/id_rsa
+
+# Create a new user
+useradd -m -d /home/${user} ${user}
