@@ -13,10 +13,12 @@ DISABLE_AUTO_UPDATE=true
 plugins=(git autojump)
 
 if [ "$TERM" = "rxvt-unicode-256color" ] || [ "$TERM" = "screen-256color" ] ;then
-    ZSH_THEME="collin"
+    ZSH_THEME="agnoster"
 fi
 
 source $ZSH/oh-my-zsh.sh
+BASE16_SHELL="$HOME/.config/base16-shell/base16-twilight.dark.sh"
+[[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
 
 if [[ -a "$HOME/.aliases" ]];then
     source "$HOME/.aliases"
@@ -29,15 +31,6 @@ fi
 # make tab-completion the same color as ls
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 
-source ~/bin/mylib  # needed for is_night
-
-BASE16_SHELL="$HOME/.config/base16-shell/base16-twilight.dark.sh"
-if is_night; then
-    BASE16_SHELL="$HOME/.config/base16-shell/base16-twilight.dark.sh"
-fi
-
-[[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
-
 # ls after every cd
 function chpwd() {
     emulate -L zsh
@@ -47,4 +40,4 @@ function chpwd() {
 ls
 
 # OPAM configuration
-. /home/collin/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
+#. /home/collin/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
