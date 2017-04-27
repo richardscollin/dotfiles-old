@@ -29,7 +29,6 @@ fi
 }
 
 mksymlink $CONFIG/clang-format $HOME/.clang-format
-mksymlink $CONFIG/powerline $HOME/.config/powerline
 
 . ~/.aliases
 
