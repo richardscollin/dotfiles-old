@@ -9,8 +9,8 @@ export LS_COLORS='rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;
 export PRINTER="HP_LaserJet_P2015_Series"
 
 export PATH="$PATH:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl"
-ruby_version=$(ruby --version | grep -o '[0-9]*\.[0-9]*\.[0-9]*')
-export PATH="$PATH:$HOME/.gem/ruby/${ruby_version}/bin"
+export PATH="$PATH:$(ruby -e 'print Gem.user_dir')/bin"
+
 export PATH="$PATH:$HOME/bin"
 
 source ~/.personal-variables
