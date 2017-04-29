@@ -1,5 +1,5 @@
 pkgname=collin-meta
-pkgver=0.2
+pkgver=0.3
 pkgrel=1
 pkgdesc="A meta-package for managing my dependences"
 arch=('any')
@@ -57,6 +57,7 @@ depends=(
 optdepends=(
 'gimp'
 'inkscape'
+'powerline-fonts-git'
 'virtualbox'
 )
 
