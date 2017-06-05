@@ -86,10 +86,12 @@ nnoremap j gj
 nnoremap k gk
 cnoremap q1 q!
 
+set spell spelllang=en_us
+
 "File specific settings
 autocmd BufNewFile Makefile 0r ~/.vim/templates/skel.mak
 autocmd BufNewFile *.h :call IncludeGuard()
-autocmd BufNewFile,BufNew,BufRead *.txt set spell
+autocmd BufNewFile,BufNew,BufRead *.txt,*.tex set spell
 autocmd BufNewFile,BufNew,BufRead *.txt,*.html,*.md set wrap linebreak
 autocmd BufNewFile,BufNew,BufRead *.c set colorcolumn=80
 autocmd BufNewFile,BufNew,BufRead *.ml compiler ocaml
