@@ -5,13 +5,14 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'AndrewRadev/switch.vim'
 Plugin 'bkad/CamelCaseMotion'
-"Plugin 'editorconfig/editorconfig-vim'
+Plugin 'editorconfig/editorconfig-vim'
 Plugin 'gmarik/Vundle.vim'
 Plugin 'mattn/emmet-vim'
 Plugin 'mickaobrien/vim-stackoverflow'
 Plugin 'noahfrederick/vim-skeleton'
 Plugin 'rust-lang/rust.vim'
 Plugin 'scrooloose/syntastic'
+Plugin 'scrooloose/NERDTree'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-vinegar'
@@ -99,6 +100,11 @@ autocmd BufNewFile,BufNew,BufRead *.caml compiler ocaml
 
 "let's you use :make for to pdflatex
 autocmd FileType tex setlocal makeprg=pdflatex\ \ -synctex=1\ --shell-escape\ '%'
+
+" NERDTree Settings
+nnoremap <leader>nt :NERDTreeToggle<cr>
+" autocmd VimEnter * :NERDTree
+autocmd BufWinEnter * :NERDTreeMirror
 
 " shortcut to run shell commands
 inoremap <c-e> <esc>:r!
