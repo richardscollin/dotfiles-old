@@ -28,7 +28,4 @@ if [ ! -e "$2" ];then
 fi
 }
 
-mksymlink $CONFIG/clang-format $HOME/.clang-format
-
 . ~/.aliases
-

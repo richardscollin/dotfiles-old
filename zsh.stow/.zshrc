@@ -17,7 +17,7 @@ if [ "$TERM" = "rxvt-unicode-256color" ] || [ "$TERM" = "screen-256color" ] ;the
 fi
 
 source $ZSH/oh-my-zsh.sh
-BASE16_SHELL="$HOME/.config/base16-shell/base16-twilight.dark.sh"
+BASE16_SHELL="$HOME/.config/base16-shell/scripts/base16-twilight.sh"
 [[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
 
 if [[ -a "$HOME/.aliases" ]];then
