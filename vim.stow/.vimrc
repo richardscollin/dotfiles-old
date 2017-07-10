@@ -1,22 +1,46 @@
 "----------------------------------------------------------------------------------------------
-set nocompatible              " required
-filetype off                  " required
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-Plugin 'AndrewRadev/switch.vim'
-Plugin 'bkad/CamelCaseMotion'
-Plugin 'editorconfig/editorconfig-vim'
-Plugin 'gmarik/Vundle.vim'
-Plugin 'mattn/emmet-vim'
-Plugin 'mickaobrien/vim-stackoverflow'
-Plugin 'noahfrederick/vim-skeleton'
-Plugin 'rust-lang/rust.vim'
-Plugin 'scrooloose/syntastic'
-Plugin 'scrooloose/NERDTree'
-Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-vinegar'
-call vundle#end()            " required
+if filereadable(expand("~/.vim/bundle/Vundle.vim/.git/HEAD"))
+    set nocompatible              " required
+    filetype off                  " required
+    set rtp+=~/.vim/bundle/Vundle.vim
+    call vundle#begin()
+    Plugin 'AndrewRadev/switch.vim'
+    Plugin 'bkad/CamelCaseMotion'
+    Plugin 'editorconfig/editorconfig-vim'
+    Plugin 'gmarik/Vundle.vim'
+    Plugin 'mattn/emmet-vim'
+    Plugin 'mickaobrien/vim-stackoverflow'
+    Plugin 'noahfrederick/vim-skeleton'
+    Plugin 'rust-lang/rust.vim'
+    Plugin 'scrooloose/syntastic'
+    Plugin 'scrooloose/NERDTree'
+    Plugin 'tpope/vim-fugitive'
+    Plugin 'tpope/vim-surround'
+    Plugin 'tpope/vim-vinegar'
+    call vundle#end()            " required
+
+    "Plugin Specific Settings
+
+    "switch between this.that and this->that
+    let g:switch_mapping = "<leader>,"
+    let b:switch_custom_definitions = [
+                \   {
+                \     '\(\k\+\)\.': '\1->',
+                \     '\(\k\+\)->': '\1.',
+                \    }
+                \ ]
+
+    "CamelCase Motion settings
+    map <S-W> <Plug>CamelCaseMotion_w
+    map <S-B> <Plug>CamelCaseMotion_b
+    map <S-E> <Plug>CamelCaseMotion_e
+
+    " NERDTree Settings
+    nnoremap <leader>nt :NERDTreeToggle<cr>
+    " autocmd VimEnter * :NERDTree
+    autocmd BufWinEnter * :NERDTreeMirror
+
+endif
 filetype plugin indent on    " required
 " :PluginList       - lists configured plugins
 " :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
@@ -27,23 +51,11 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 "----------------------------------------------------------------------------------------------
 "
-"CamelCase Motion settings
-map <S-W> <Plug>CamelCaseMotion_w
-map <S-B> <Plug>CamelCaseMotion_b
-map <S-E> <Plug>CamelCaseMotion_e
 
 "Disable powerline
 "let g:powerline_loaded = 1
 set rtp+=${POWERLINE_DIR}/bindings/vim
 
-"switch between this.that and this->that
-let g:switch_mapping = "<leader>,"
-let b:switch_custom_definitions = [
-            \   {
-            \     '\(\k\+\)\.': '\1->',
-            \     '\(\k\+\)->': '\1.',
-            \    }
-            \ ]
 " Statusline
 set t_Co=256
 set encoding=utf-8
@@ -53,8 +65,8 @@ set laststatus=2
 let mapleader = ","
 let g:mapleader = ","
 
-set nocompatible
 filetype plugin indent on
+set nocompatible
 set smartindent
 set tabstop=8
 set shiftwidth=4
@@ -69,7 +81,7 @@ set backspace=2 "need for proper backspace behavoir in neovim
 syntax on
 set nojoinspaces
 set nowrap
-set nu
+set number
 "set rnu
 " Custom mappings
 nnoremap  ; :
@@ -100,11 +112,6 @@ autocmd BufNewFile,BufNew,BufRead *.caml compiler ocaml
 
 "let's you use :make for to pdflatex
 autocmd FileType tex setlocal makeprg=pdflatex\ \ -synctex=1\ --shell-escape\ '%'
-
-" NERDTree Settings
-nnoremap <leader>nt :NERDTreeToggle<cr>
-" autocmd VimEnter * :NERDTree
-autocmd BufWinEnter * :NERDTreeMirror
 
 " shortcut to run shell commands
 inoremap <c-e> <esc>:r!
