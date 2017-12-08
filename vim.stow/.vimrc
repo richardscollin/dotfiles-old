@@ -1,4 +1,5 @@
 "----------------------------------------------------------------------------------------------
+let mapleader = ","
 if filereadable(expand("~/.vim/bundle/Vundle.vim/.git/HEAD"))
     set nocompatible              " required
     filetype off                  " required
@@ -9,9 +10,8 @@ if filereadable(expand("~/.vim/bundle/Vundle.vim/.git/HEAD"))
     Plugin 'editorconfig/editorconfig-vim'
     Plugin 'gmarik/Vundle.vim'
     Plugin 'mattn/emmet-vim'
-    Plugin 'mickaobrien/vim-stackoverflow'
+    Plugin 'mileszs/ack.vim'
     Plugin 'noahfrederick/vim-skeleton'
-    Plugin 'rust-lang/rust.vim'
     Plugin 'scrooloose/syntastic'
     Plugin 'scrooloose/NERDTree'
     Plugin 'tpope/vim-fugitive'
@@ -22,7 +22,7 @@ if filereadable(expand("~/.vim/bundle/Vundle.vim/.git/HEAD"))
     "Plugin Specific Settings
 
     "switch between this.that and this->that
-    let g:switch_mapping = "<leader>,"
+    let g:switch_mapping = "<Leader>,"
     let b:switch_custom_definitions = [
                 \   {
                 \     '\(\k\+\)\.': '\1->',
@@ -36,9 +36,11 @@ if filereadable(expand("~/.vim/bundle/Vundle.vim/.git/HEAD"))
     map <S-E> <Plug>CamelCaseMotion_e
 
     " NERDTree Settings
-    nnoremap <leader>nt :NERDTreeToggle<cr>
-    " autocmd VimEnter * :NERDTree
-    autocmd BufWinEnter * :NERDTreeMirror
+    nnoremap <silent> <Leader>n :NERDTreeToggle<CR> :silent NERDTreeMirror<CR>
+    nnoremap <silent> <Leader>s :tabdo NERDTreeClose<CR> :mksession!<CR>
+    nnoremap <silent> <Leader>o :tabdo NERDTreeToggle \| silent NERDTreeMirror<CR>:tabdo windo echo<CR>
+    "autocmd VimEnter * :NERDTree
+    "autocmd BufWinEnter * :NERDTreeMirror
 
 endif
 filetype plugin indent on    " required
@@ -116,7 +118,7 @@ autocmd FileType tex setlocal makeprg=pdflatex\ \ -synctex=1\ --shell-escape\ '%
 " shortcut to run shell commands
 inoremap <c-e> <esc>:r!
 nnoremap <c-e> <esc>:r!
-nnoremap <leader>r <esc>:r!
+nnoremap <Leader>r <esc>:r!
 
 "Compile keybinding
 nnoremap <F5> :make<CR>
@@ -133,6 +135,17 @@ inoreab if@ if () {<cr>}<esc>kf(a:call getchar()<cr>
 inoreab for@ for (;;) {<cr>}<esc>kf(a:call getchar()<cr>
 inoreab #i #include ""<left>:call getchar()<cr>
 inoreab sop System.out.println
+
+"Tab Shortcuts
+nnoremap <Leader>j gT
+nnoremap <Leader>l gt
+
+"Search features
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
+endif
+cnoreabbrev Ack Ack!
+
 
 function! IncludeGuard()
     let l:name = substitute(toupper(expand('%:t')), '\.', '_', 'g')
