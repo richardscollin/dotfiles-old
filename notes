@@ -10,6 +10,21 @@ GIT Cheat Sheet
 - git archive --format=tar.gz --prefix=project/ HEAD > project.tar.gz   # package a repo
 - git send-email -1 --to meta-virtualization@yoctoproject.org --subject-prefix="meta-virtualization][PATCH"
 
+# Make and GNU Stow Cheat Sheet
+./configure --prefix=/usr/local
+make
+sudo make install prefix=/usr/local/stow/foo-1.2.3
+cd /usr/local/stow
+stow foo-1.2.3
+# if this does not work then the following might
+
+./configure --prefix=/usr/local
+make
+sudo make DESTDIR=/usr/local/stow/foo-1.2.3 install
+cd /usr/local/stow
+# but you may have to fix the path in the installed directory before using stow
+stow -t / foo-1.2.3
+
 One liners
 ------------
 # Allow a certain user to access your machine

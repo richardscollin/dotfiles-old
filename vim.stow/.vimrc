@@ -36,9 +36,10 @@ if filereadable(expand("~/.vim/bundle/Vundle.vim/.git/HEAD"))
     map <S-E> <Plug>CamelCaseMotion_e
 
     " NERDTree Settings
-    nnoremap <silent> <Leader>n :NERDTreeToggle<CR> :silent NERDTreeMirror<CR>
-    nnoremap <silent> <Leader>s :tabdo NERDTreeClose<CR> :mksession!<CR>
-    nnoremap <silent> <Leader>o :tabdo NERDTreeToggle \| silent NERDTreeMirror<CR>:tabdo windo echo<CR>
+    let g:lasttab = 1
+    nnoremap <silent> <Leader>n :NERDTreeToggle<CR>:silent NERDTreeMirror<CR>
+    nnoremap <silent> <Leader>s :let g:lasttab = tabpagenr()<CR>:tabdo NERDTreeClose<CR>:exe "tabn ".g:lasttab<CR>:mksession!<CR>
+    nnoremap <silent> <Leader>o :let g:lasttab = tabpagenr()<CR>:tabdo NERDTreeToggle \| silent NERDTreeMirror<CR>:tabdo windo echo<CR>:exe "tabn ".g:lasttab<CR>
     "autocmd VimEnter * :NERDTree
     "autocmd BufWinEnter * :NERDTreeMirror
 
