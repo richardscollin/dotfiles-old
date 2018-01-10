@@ -24,7 +24,7 @@ if [[ -a "$HOME/.aliases" ]];then
     source "$HOME/.aliases"
 fi
 
-if [[ -a "$HOME/.emojis.zsh" ]];then
+if [[ -a "$HOME/.emojis.zsh" ]] && [[ -n "${EMOJIS}" ]] ;then
     source "$HOME/.emojis.zsh"
 fi
 

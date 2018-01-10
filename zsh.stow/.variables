@@ -1,6 +1,7 @@
 export CONFIG="$HOME/config"
 export CFLAGS="-Wall -g"
-export EDITOR='vim'
+#export EMOJIS="1"
+export EDITOR='nvim'
 export JAVA_HOME='/usr/lib/jvm/default'
 export POWERLINE_DIR='/usr/lib/python3.6/site-packages/powerline'
 export POWERLINE_COMMAND="powerline"
