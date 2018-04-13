@@ -35,3 +35,18 @@ ssh-add ~/.ssh/id_rsa
 
 # Create a new user
 useradd -m -d /home/${user} ${user}
+
+# Xargs with argument list
+cat list | xargs -I {} -n1 echo {}.bak
+
+C Cheat Sheet
+-------------
+
+printf("%.*s\n" str_len, str); // print non-NUL terminated string
+
+Perf Flame Graph
+----------------
+git clone https://github.com/brendangregg/FlameGraph
+perf record -F 99 -ag -- sleep 10
+perf script | ./stackcollapse-perf.pl > out.perf-folded
+./flamegraph.pl out.perf-folded > perf-kernel.svg
