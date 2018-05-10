@@ -25,7 +25,6 @@ alias sx="startx "
 alias t="tmux"
 alias u="sudo pacman -Syu"
 alias v="vim "
-alias vim="nvim "
 alias x="tar xzvf"
 
 alias neo=nvim
