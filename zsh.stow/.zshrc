@@ -28,6 +28,11 @@ if [[ -a "$HOME/.emojis.zsh" ]] && [[ -n "${EMOJIS}" ]] ;then
     source "$HOME/.emojis.zsh"
 fi
 
+# Recommend packages on invalid command
+if [[ -a /etc/profile.d/cnf.sh ]];then
+    source /etc/profile.d/cnf.sh
+fi
+
 # make tab-completion the same color as ls
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 
