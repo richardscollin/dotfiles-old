@@ -29,3 +29,5 @@ fi
 }
 
 . ~/.aliases
+echo "echo 'source ~/.variables' >> ~/.bashrc"
+echo "echo 'source ~/.aliases' >> ~/.bashrc"
