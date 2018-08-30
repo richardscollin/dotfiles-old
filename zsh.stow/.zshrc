@@ -24,8 +24,13 @@ if [[ -a "$HOME/.aliases" ]];then
     source "$HOME/.aliases"
 fi
 
-if [[ -a "$HOME/.emojis.zsh" ]];then
+if [[ -a "$HOME/.emojis.zsh" ]] && [[ -n "${EMOJIS}" ]] ;then
     source "$HOME/.emojis.zsh"
+fi
+
+# Recommend packages on invalid command
+if [[ -a /etc/profile.d/cnf.sh ]];then
+    source /etc/profile.d/cnf.sh
 fi
 
 # make tab-completion the same color as ls

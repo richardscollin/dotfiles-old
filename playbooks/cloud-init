@@ -1,0 +1,8 @@
+#cloud-config
+packages:
+  - ansible
+users:
+  - name: collin
+    shell: /bin/bash
+    sudo: ALL=(ALL) NOPASSWD:ALL
+    ssh_import_id: gh:richardscollin
