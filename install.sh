@@ -17,7 +17,6 @@ fi
 }
 
 install_update_repo https://github.com/gmarik/Vundle.vim.git "$HOME/.vim/bundle/Vundle.vim"
-install_update_repo https://github.com/chriskempson/base16-shell "$HOME/.config/base16-shell"
 install_update_repo https://github.com/robbyrussell/oh-my-zsh "$HOME/.oh-my-zsh"
 
 function mksymlink {
