@@ -75,6 +75,7 @@ set tabstop=8
 set shiftwidth=4
 set softtabstop=4
 set expandtab
+autocmd BufNewFile,BufNew,BufRead *.html,*.css set shiftwidth=2 softtabstop=2
 
 set mouse=a
 set wildmenu
