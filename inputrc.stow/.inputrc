@@ -1,7 +1,0 @@
-$include /etc/inputrc
-
-# ignore case when tab completing
-set completion-ignore-case on
-
-# don't duplicate text when tab completing in middle of file
-set skip-completed-text on
