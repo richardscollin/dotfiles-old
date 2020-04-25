@@ -3,7 +3,10 @@ clang -Weverything -Werror "$0" && exec ./a.out "$@"
 exit 1
 #endif
 
+#include <stdint.h>
 #include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
 
 int main(int argc, char *argv[])
 {

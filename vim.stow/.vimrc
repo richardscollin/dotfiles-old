@@ -12,8 +12,9 @@ if filereadable(expand("~/.vim/bundle/Vundle.vim/.git/HEAD"))
     Plugin 'mattn/emmet-vim'
     Plugin 'mileszs/ack.vim'
     Plugin 'noahfrederick/vim-skeleton'
-    Plugin 'scrooloose/syntastic'
+    Plugin 'posva/vim-vue'
     Plugin 'scrooloose/NERDTree'
+    "Plugin 'scrooloose/syntastic'
     Plugin 'tpope/vim-fugitive'
     Plugin 'tpope/vim-surround'
     Plugin 'tpope/vim-vinegar'
@@ -43,6 +44,11 @@ if filereadable(expand("~/.vim/bundle/Vundle.vim/.git/HEAD"))
     "autocmd VimEnter * :NERDTree
     "autocmd BufWinEnter * :NERDTreeMirror
 
+    "TODO maybe integrate into plugin
+    let g:skeleton_replacements = {}
+    function! g:skeleton_replacements.UBASENAME()
+        return toupper(fnamemodify(expand('%'), ':t:r'))
+    endfunction
 endif
 filetype plugin indent on    " required
 " :PluginList       - lists configured plugins
@@ -54,7 +60,6 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 "----------------------------------------------------------------------------------------------
 "
-
 "Disable powerline
 "let g:powerline_loaded = 1
 set rtp+=${POWERLINE_DIR}/bindings/vim
@@ -75,7 +80,7 @@ set tabstop=8
 set shiftwidth=4
 set softtabstop=4
 set expandtab
-autocmd BufNewFile,BufNew,BufRead *.html,*.css set shiftwidth=2 softtabstop=2
+autocmd BufNewFile,BufNew,BufRead *.html,*.css,*.js,*.vue set shiftwidth=2 softtabstop=2
 
 set mouse=a
 set wildmenu
@@ -103,12 +108,8 @@ nnoremap j gj
 nnoremap k gk
 cnoremap q1 q!
 
-set spell spelllang=en_us
-
 "File specific settings
 autocmd BufNewFile Makefile 0r ~/.vim/templates/skel.mak
-autocmd BufNewFile *.h :call IncludeGuard()
-autocmd BufNewFile,BufNew,BufRead *.txt,*.tex set spell
 autocmd BufNewFile,BufNew,BufRead *.txt,*.html,*.md set wrap linebreak
 autocmd BufNewFile,BufNew,BufRead *.c set colorcolumn=80
 autocmd BufNewFile,BufNew,BufRead *.ml compiler ocaml
@@ -148,14 +149,7 @@ if executable('ag')
 endif
 cnoreabbrev Ack Ack!
 
-
-function! IncludeGuard()
-    let l:name = substitute(toupper(expand('%:t')), '\.', '_', 'g')
-    put! ='#endif /* ' . l:name . ' */'
-    put! ='#define ' . l:name
-    put! ='#ifndef ' . l:name
-endfunction
-
 if has("xterm_clipboard")
     set clipboard=unnamedplus
 endif
+
