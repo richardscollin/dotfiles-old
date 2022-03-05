@@ -23,11 +23,13 @@
 [diff "odf"]
         binary = true
         textconv = odt2txt
-[help]
-	autocorrect = 25
-[push]
-	default = simple
 [fetch]
 	prune = true
+[help]
+	autocorrect = 25
 [pager]
 	branch = false
+[pull]
+	ff = only
+[push]
+	default = simple
