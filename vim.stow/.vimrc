@@ -1,5 +1,4 @@
 "----------------------------------------------------------------------------------------------
-let mapleader = ","
 if filereadable(expand("~/.vim/bundle/Vundle.vim/.git/HEAD"))
     set nocompatible              " required
     filetype off                  " required
@@ -10,11 +9,8 @@ if filereadable(expand("~/.vim/bundle/Vundle.vim/.git/HEAD"))
     Plugin 'editorconfig/editorconfig-vim'
     Plugin 'gmarik/Vundle.vim'
     Plugin 'mattn/emmet-vim'
-    Plugin 'mileszs/ack.vim'
     Plugin 'noahfrederick/vim-skeleton'
-    Plugin 'posva/vim-vue'
     Plugin 'scrooloose/NERDTree'
-    "Plugin 'scrooloose/syntastic'
     Plugin 'tpope/vim-fugitive'
     Plugin 'tpope/vim-surround'
     Plugin 'tpope/vim-vinegar'
@@ -43,6 +39,12 @@ if filereadable(expand("~/.vim/bundle/Vundle.vim/.git/HEAD"))
     nnoremap <silent> <Leader>o :let g:lasttab = tabpagenr()<CR>:tabdo NERDTreeToggle \| silent NERDTreeMirror<CR>:tabdo windo echo<CR>:exe "tabn ".g:lasttab<CR>
     "autocmd VimEnter * :NERDTree
     "autocmd BufWinEnter * :NERDTreeMirror
+    "
+
+    function! s:check_back_space() abort
+        let col = col('.') - 1
+        return !col || getline('.')[col - 1]  =~# '\s'
+    endfunction
 
     "TODO maybe integrate into plugin
     let g:skeleton_replacements = {}
@@ -60,18 +62,6 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 "----------------------------------------------------------------------------------------------
 "
-"Disable powerline
-"let g:powerline_loaded = 1
-set rtp+=${POWERLINE_DIR}/bindings/vim
-
-" Statusline
-set t_Co=256
-set encoding=utf-8
-set laststatus=2
-
-" Begin my config
-let mapleader = ","
-let g:mapleader = ","
 
 filetype plugin indent on
 set nocompatible
@@ -80,18 +70,33 @@ set tabstop=8
 set shiftwidth=4
 set softtabstop=4
 set expandtab
-autocmd BufNewFile,BufNew,BufRead *.html,*.css,*.js,*.vue set shiftwidth=2 softtabstop=2
+autocmd BufNewFile,BufNew,BufRead *.html,*.css,*.js,*.vue,*.rb,*.html.erb set shiftwidth=2 softtabstop=2
+
+"File specific settings
+autocmd BufNewFile Makefile 0r ~/.vim/templates/skel.mak
+autocmd BufNewFile,BufNew,BufRead *.txt,*.html,*.md set wrap linebreak
+autocmd BufNewFile,BufNew,BufRead *.c set colorcolumn=80
+autocmd BufNewFile,BufNew,BufRead *.ml,*.caml compiler ocaml
+autocmd FileType c,cpp setlocal equalprg=clang-format
 
 set mouse=a
 set wildmenu
 set nocursorline "decreases latency on large files
-set backspace=2 "need for proper backspace behavoir in neovim
 
 syntax on
 set nojoinspaces
 set nowrap
 set number
 "set rnu
+
+set encoding=utf-8
+set laststatus=2
+
+" Begin my config
+let mapleader = ","
+let g:mapleader = ","
+
+"
 " Custom mappings
 nnoremap  ; :
 inoremap jk <esc>
@@ -104,50 +109,16 @@ nnoremap <backspace> <C-u>
 "Use minus to jump to end of line.
 nnoremap - $
 onoremap - $
+
+"change line wrap down cursor behavior
 nnoremap j gj
 nnoremap k gk
+
+"fix common typo
 cnoremap q1 q!
-
-"File specific settings
-autocmd BufNewFile Makefile 0r ~/.vim/templates/skel.mak
-autocmd BufNewFile,BufNew,BufRead *.txt,*.html,*.md set wrap linebreak
-autocmd BufNewFile,BufNew,BufRead *.c set colorcolumn=80
-autocmd BufNewFile,BufNew,BufRead *.ml compiler ocaml
-autocmd BufNewFile,BufNew,BufRead *.caml compiler ocaml
-
-"let's you use :make for to pdflatex
-autocmd FileType tex setlocal makeprg=pdflatex\ \ -synctex=1\ --shell-escape\ '%'
-
-" shortcut to run shell commands
-inoremap <c-e> <esc>:r!
-nnoremap <c-e> <esc>:r!
-nnoremap <Leader>r <esc>:r!
-
-"Compile keybinding
-nnoremap <F5> :make<CR>
 
 "Ctags settings
 set tags=./tags,tags,~/.vim/ctags/tags
-
-"I prefer text formatted a width of 60 because that's how
-"much a terminal taking up half of my screen can fit
-set formatprg=fmt\ -60
-
-"Autocomplete
-inoreab if@ if () {<cr>}<esc>kf(a:call getchar()<cr>
-inoreab for@ for (;;) {<cr>}<esc>kf(a:call getchar()<cr>
-inoreab #i #include ""<left>:call getchar()<cr>
-inoreab sop System.out.println
-
-"Tab Shortcuts
-nnoremap <Leader>j gT
-nnoremap <Leader>l gt
-
-"Search features
-if executable('ag')
-  let g:ackprg = 'ag --vimgrep'
-endif
-cnoreabbrev Ack Ack!
 
 if has("xterm_clipboard")
     set clipboard=unnamedplus

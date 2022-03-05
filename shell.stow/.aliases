@@ -1,31 +1,16 @@
-alias a="ag"
 alias c="cd"
 alias cc="clang"
 alias copy="xclip -selection clipboard"
 alias chmox="chmod +x "
-alias f="firefox"
 alias g="git"
-alias i="sudo pacman -S "
 alias info="info --vi-keys"
 alias l="ls"
 alias la="ls -la"
-alias m="mv"
-alias mk="make"
-alias n="netctl"
-alias o="open"
-alias open="xdg-open"
-alias p="pacman"
-alias pi="pianobar"
-alias r=rustc
+alias o="xdg-open "
+alias open="xdg-open "
 alias s="sudo "
-alias shit="shutdown -h now"
-alias sl=ls
+alias sl="ls "
 alias sudo="sudo " # makes aliases work with sudo
-alias sx="startx "
-alias t="tmux"
-alias u="sudo pacman -Syu"
 alias v="vim "
 alias x="tar xzvf"
-
-alias neo=nvim
-
+alias todo="vim ~/todo"

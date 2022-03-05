@@ -8,3 +8,7 @@ set mark-symlinked-directories On
 set show-all-if-ambiguous On
 set show-all-if-unmodified On
 set visible-stats On
+
+# extra things I've added
+set expand-tilde On
+set skip-completed-text On
