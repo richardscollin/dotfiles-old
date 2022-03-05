@@ -14,3 +14,4 @@ alias sudo="sudo " # makes aliases work with sudo
 alias v="vim "
 alias x="tar xzvf"
 alias todo="vim ~/todo"
+source ~/.variables

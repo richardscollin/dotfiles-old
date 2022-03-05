@@ -1,11 +1,8 @@
 # If not running interactively, do not do anything
 [[ $- != *i* ]] && return
-if [[ -a "$HOME/.variables" ]];then
-    source "$HOME/.variables"
-fi
 
-if [[ -a "$HOME/.aliases" ]];then
-    source "$HOME/.aliases"
+if [[ -a "$HOME/.bash_aliases" ]];then
+    source "$HOME/.bash_aliases"
 fi
 
 DISABLE_AUTO_UPDATE=true
