@@ -11,9 +11,9 @@ export PATH="$PATH:$(ruby -e 'print Gem.user_dir')/bin"
 source /home/collin/.rvm/scripts/rvm # sets GEM_HOME
 
 source ~/.personal-variables
-if [ -z "${FULL_NAME}" ] || [ -z "${EMAIL}" ] || [ -z "${SIG}" ] ;then
+if [ -z "${FULL_NAME}" ] || [ -z "${EMAIL}" ] ;then
     echo "Error unset environment variables"
-    echo "Please set FULL_NAME, EMAIL, and SIG in ~/.personal-variables"
+    echo "Please set FULL_NAME and EMAIL in ~/.personal-variables"
 fi
 export GIT_AUTHOR_NAME="${FULL_NAME}"
 export GIT_COMMITTER_NAME="${FULL_NAME}"
