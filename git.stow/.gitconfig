@@ -1,5 +1,3 @@
-[push]
-	default = simple
 [alias]
 	a    = add
 	br   = branch
@@ -10,6 +8,7 @@
 	d    = diff
 	hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
 	ol   = log --oneline
+        lg   = "log --format='%C(auto) %an %h %d %s'"
 	ph   = push
 	pl   = pull
 	ps   = push
@@ -17,12 +16,18 @@
 	st   = status
 	last = for-each-ref 'refs/heads' 'refs/remotes/*/[^H][^E][^A][^D]*' --sort=-committerdate --format='%(HEAD) %(refname:short) - (%(color:green)%(committerdate:relative)%(color:reset)) - %(color:yellow)%(authorname)%(color:reset) - %(contents:subject)'
 	del-remote-br = !sh -c 'git push origin :$1' -
-[help]
-	autocorrect = 25
 [color]
 	ui = auto
+[core]
+	autocrlf = input
 [diff "odf"]
         binary = true
         textconv = odt2txt
+[help]
+	autocorrect = 25
+[push]
+	default = simple
 [fetch]
 	prune = true
+[pager]
+	branch = false
