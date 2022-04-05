@@ -28,6 +28,8 @@ if filereadable(expand("~/.vim/bundle/Vundle.vim/.git/HEAD"))
                 \ ]
 
     "CamelCase Motion settings
+    " shift-w, shift-b, shift-e
+    " to move by camelcase word
     map <S-W> <Plug>CamelCaseMotion_w
     map <S-B> <Plug>CamelCaseMotion_b
     map <S-E> <Plug>CamelCaseMotion_e
