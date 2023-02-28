@@ -1,13 +1,13 @@
 export CFLAGS="-Wall -g"
 export EDITOR='vim'
-# export PS1='%n@%m:%~%#'
-export PS1='%~%# '
 export JAVA_HOME='/usr/lib/jvm/default'
 
 export PATH="/snap/bin:$PATH"
 export PATH="$PATH:$HOME/.cabal/bin"
+export PATH="$PATH:/usr/local/go/bin"
 export PATH="$PATH:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl"
 export PATH="$PATH:$(ruby -e 'print Gem.user_dir')/bin"
+
 source /home/collin/.rvm/scripts/rvm # sets GEM_HOME
 
 source ~/.personal-variables

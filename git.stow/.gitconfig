@@ -14,6 +14,7 @@
 	ps   = push
 	s    = status
 	st   = status
+	sw   = switch
 	last = for-each-ref 'refs/heads' 'refs/remotes/*/[^H][^E][^A][^D]*' --sort=-committerdate --format='%(HEAD) %(refname:short) - (%(color:green)%(committerdate:relative)%(color:reset)) - %(color:yellow)%(authorname)%(color:reset) - %(contents:subject)'
 	del-remote-br = !sh -c 'git push origin :$1' -
 [color]
@@ -29,7 +30,5 @@
 	autocorrect = 25
 [pager]
 	branch = false
-[pull]
-	ff = only
 [push]
 	default = simple

@@ -75,10 +75,8 @@ set expandtab
 autocmd BufNewFile,BufNew,BufRead *.html,*.css,*.js,*.vue,*.rb,*.html.erb set shiftwidth=2 softtabstop=2
 
 "File specific settings
-autocmd BufNewFile Makefile 0r ~/.vim/templates/skel.mak
 autocmd BufNewFile,BufNew,BufRead *.txt,*.html,*.md set wrap linebreak
 autocmd BufNewFile,BufNew,BufRead *.c set colorcolumn=80
-autocmd BufNewFile,BufNew,BufRead *.ml,*.caml compiler ocaml
 autocmd FileType c,cpp setlocal equalprg=clang-format
 
 set mouse=a
@@ -126,3 +124,4 @@ if has("xterm_clipboard")
     set clipboard=unnamedplus
 endif
 
+color peachpuff
